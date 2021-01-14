@@ -12,6 +12,37 @@ h1 {
 	font-weight: 800;
 }
 
+p a {
+	color: #333333;
+	text-decoration: none;
+	font-style: italic;
+	display: inline-block;
+}
+
+p a:hover {
+	color: #333333;
+	text-decoration: none;
+}
+
+p a:focus {
+	color: #333333;
+	text-decoration: none;
+}
+
+p a::after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background: #333333;
+	transition: width 0.2s ease-in-out;
+}
+
+p a:hover::after {
+	width: 100%;
+	transition: width 0.2s ease-in-out;
+}
+
 .navbar {
 	background-color: #353535;
 	padding: 1% 0;
@@ -109,7 +140,7 @@ footer {
 	color: white;
 }
 
-footer i, a {
+footer i, footer a {
 	color: white;
 }
 
