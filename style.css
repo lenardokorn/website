@@ -140,7 +140,11 @@ footer {
 	color: white;
 }
 
-footer i, footer a {
+footer i {
+	color: white;
+}
+
+footer a {
 	color: white;
 }
 
