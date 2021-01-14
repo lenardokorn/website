@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS-Eigenschaft: CSS3-Eigenschaften</title>
+	<link rel="stylesheet" href="../../../css/home-exercises/css-properties-style.css">
+	<style>
+		td {
+			width: min-content;
+			vertical-align: center;
+		}
+
+		td img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		#opacity:hover {
+			opacity: 0.5;
+		}
+
+		#shadow:hover {
+			box-shadow: 10px 10px 5px gray;
+		}
+
+		#border-radius:hover {
+			border-radius: 20px;
+		}
+
+		#angle:hover {
+			transform: rotate(45deg);
+		}
+
+		#zoom:hover {
+			transform: scale(2);
+		}
+
+		#animation {
+			transition: transform ease-in-out 2s;
+		}
+
+		#animation:hover {
+			transform: scale(1.5) rotate(-45deg);
+		}
+
+		#multiple-images:hover {
+			background-image: url("../../../images/home-exercises/SuitImageSmall.jpg"), url("../../../images/home-exercises/mojave-night.jpg");
+			background-position: right bottom, left top;
+			background-repeat: no-repeat, repeat;
+		}
+	</style>
+</head>
+<body>
+	<h1>CSS3-Eigenschaften</h1>
+	<p>Über das rechte Bild hovern, um die Änderung zu sehen.</p>
+
+	<table>
+		<tr>
+			<td>
+				<p>Bild mit Transparenzwert opacity 0.5</p>
+			</td>
+			<td>
+				<img src="../../../images/home-exercises/SuitImageSmall.jpg" alt="">
+			</td>
+			<td>
+				<img src="../../../images/home-exercises/SuitImageSmall.jpg" alt="" id="opacity">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p>Bild mit Schatten</p>
+			</td>
+			<td>
+				<img src="../../../images/home-exercises/SuitImageSmall.jpg" alt="">
+			</td>
+			<td>
+				<img src="../../../images/home-exercises/SuitImageSmall.jpg" alt="" id="shadow">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p>BorderRadius bei Bild mit einem Wert von 20px</p>
+			</td>
+			<td>
+				<img src="../../../images/home-exercises/SuitImageSmall.jpg" alt="">
+			</td>
+			<td>
+				<img src="../../../images/home-exercises/SuitImageSmall.jpg" alt="" id="border-radius">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p>Transformation von 45 Grad</p>
+			</td>
+			<td>
+				<img src="../../../images/home-exercises/SuitImageSmall.jpg" alt="">
+			</td>
+			<td>
+				<img src="../../../images/home-exercises/SuitImageSmall.jpg" alt="" id="angle">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p>Zoom von Faktor 2</p>
+			</td>
+			<td>
+				<img src="../../../images/home-exercises/SuitImageSmall.jpg" alt="">
+			</td>
+			<td>
+				<img src="../../../images/home-exercises/SuitImageSmall.jpg" alt="" id="zoom">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p>Verzögerung (2 Sekunden) einbauen - Animation</p>
+			</td>
+			<td>
+				<img src="../../../images/home-exercises/SuitImageSmall.jpg" alt="">
+			</td>
+			<td>
+				<img src="../../../images/home-exercises/SuitImageSmall.jpg" alt="" id="animation">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p>Mehrere Bilder im Hintergrund</p>
+			</td>
+			<td>
+				<img src="../../../images/home-exercises/mojave-night.jpg" alt="" style="width: 75px;">
+				<img src="../../../images/home-exercises/SuitImageSmall.jpg" alt="">
+			</td>
+			<td id="multiple-images"></td>
+		</tr>
+	</table>
+</body>
+</html>

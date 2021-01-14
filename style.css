@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic");
+@import url("https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900");
+
+html, body {
+	height: 100%;
+	width: 100%;
+	font-family: "Inter";
+}
+
+h1 {
+	font-family: "Montserrat";
+	font-weight: 800;
+}
+
+.navbar {
+	background-color: #353535;
+	padding: 1% 0;
+	font-size: 1.2em;
+}
+
+.navbar-brand {
+	min-height: 55px;
+	padding: 10px 15px 5px;
+}
+
+.navbar-brand h1 {
+	margin: 0;
+	color: white;
+}
+
+.navbar-default .navbar-nav li a, .navbar-default .navbar-nav li a:focus {
+	color: #a3a3a3;
+}
+
+.navbar-default .navbar-nav li a:hover {
+	color: white;
+}
+
+#home {
+	background: url("images/clouds-background-compressed.jpg") no-repeat center center fixed;
+	display: table;
+	height: 100%;
+	position: relative;
+	width: 100%;
+	background-size: cover;
+}
+
+.landing-text {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	color: #353535;
+}
+
+.landing-text h1 {
+	font-size: 500%;
+	font-weight: 700;
+}
+
+.vcenter {
+	display: flex;
+	align-items: center;
+}
+
+.subheading {
+	padding: 20px 0 70px;
+	text-align: center;
+}
+
+.subheading h2 {
+	margin: 0;
+}
+
+.padding {
+	padding: 80px 0;
+}
+
+.padding img {
+	width: 100%;
+}
+
+#about img {
+	max-width: 50%;
+	margin: 0 auto;
+}
+
+/* For use of fixed background instead of <hr> */
+#fixed {
+	background: url("img/background.jpg") no-repeat center center fixed;
+	display: table;
+	height: 30%;
+	position: relative;
+	width: 100%;
+	background-size: cover;
+}
+
+hr {
+	margin: 0;
+}
+
+.project-description {
+	font-size: 16px;
+}
+
+footer {
+	width: 100%;
+	background-color: #353535;
+	padding: 2.5% 5% 2.5% 5%;
+	color: white;
+}
+
+footer i, a {
+	color: white;
+}
+
+footer a:hover {
+	color: #a3a3a3;
+	text-decoration: none;
+}
+
+footer a:focus {
+	color: white;
+	text-decoration: none;
+}
+
+.fa {
+	padding: 15px;
+	font-size: 25px;
+	color: white;
+}
+
+.fa:hover {
+	color: #a3a3a3;
+	text-decoration: none;
+}
+
+@media (max-width: 768px) {
+	.landing-text h1 {
+		font-size: 300%;
+	}
+
+	.fa {
+		font-size: 20px;
+		padding: 10px;
+	}
+
+	.vcenter {
+		display: unset;
+		align-items: unset;
+	}
+
+	.subheading {
+		padding: 0;
+	}
+
+	.padding {
+		padding: 40px 0;
+	}
+}
+
+@media (max-width: 960px) {
+	#about img {
+		max-width: 100%;
+	}
+}
