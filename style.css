@@ -1,14 +1,15 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic");
-@import url("https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic');
+@import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900');
 
-html, body {
+html,
+body {
 	height: 100%;
 	width: 100%;
-	font-family: "Inter";
+	font-family: 'Inter';
 }
 
 h1 {
-	font-family: "Montserrat";
+	font-family: 'Montserrat';
 	font-weight: 800;
 }
 
@@ -59,7 +60,8 @@ p a:hover::after {
 	color: white;
 }
 
-.navbar-default .navbar-nav li a, .navbar-default .navbar-nav li a:focus {
+.navbar-default .navbar-nav li a,
+.navbar-default .navbar-nav li a:focus {
 	color: #a3a3a3;
 }
 
@@ -68,7 +70,7 @@ p a:hover::after {
 }
 
 #home {
-	background: url("images/clouds-background-compressed.jpg") no-repeat center center fixed;
+	background: url('images/clouds-background-compressed.jpg') no-repeat center center fixed;
 	display: table;
 	height: 100%;
 	position: relative;
@@ -117,7 +119,7 @@ p a:hover::after {
 
 /* For use of fixed background instead of <hr> */
 #fixed {
-	background: url("img/background.jpg") no-repeat center center fixed;
+	background: url('img/background.jpg') no-repeat center center fixed;
 	display: table;
 	height: 30%;
 	position: relative;
