@@ -1,131 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Pseudo-element</title>
-	<link rel="stylesheet" href="../../../../css/home-exercises/css-properties-total/css-properties-total-layout.css">
-	<style>
-		p.fli::first-line {
-			color: red;
-			font-variant: small-caps;
-		}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-element</title>
+    <link rel="stylesheet" href="../../../../css/home-exercises/css-properties-total/css-properties-total-layout.css">
+    <style>
+        p.fli::first-line {
+            color: red;
+            font-variant: small-caps;
+        }
 
-		p.fle::first-letter {
-			color: red;
-			font-size: xx-large;
-		}
+        p.fle::first-letter {
+            color: red;
+            font-size: xx-large;
+        }
 
-		p#test1::before {
-			content: url("../../../../images/home-exercises/SuitImageSmall.jpg");
-		}
+        p#test1::before {
+            content: url("../../../../images/home-exercises/SuitImageSmall.jpg");
+        }
 
-		p#test2::after {
-			content: url("../../../../images/home-exercises/SuitImageSmall.jpg");
-		}
+        p#test2::after {
+            content: url("../../../../images/home-exercises/SuitImageSmall.jpg");
+        }
 
-		p#test3::selection {
-			color: tomato;
-			background: #f4a261;
-		}
-	</style>
+        p#test3::selection {
+            color: tomato;
+            background: #f4a261;
+        }
+    </style>
 </head>
+
 <body>
-	<h2>Pseudo-element</h2>
+    <h2>Pseudo-element</h2>
 
-	<p>
-		Ein CSS pseudo-element benutzt man um bestimmte Teile eines Elements anders aussehen zu lassen. Zum Beispiel kann man es so verwenden:
-	</p>
-	<ul>
-		<li>Den ersten Buchstaben oder die erste Zeile eines Elements anders aussehen lassen.</li>
-		<li>Dinge vor oder nach einem Element einfügen.</li>
-	</ul>
-	<p>Pseudo-elements haben folgenden Syntax:</p>
-	<div class="code-block">
-		<p>
-			selector::pseudo-element {<br>
-				property: value;<br>
-			}
-		</p>
-	</div>
+    <p>
+        Ein CSS pseudo-element benutzt man um bestimmte Teile eines Elements anders aussehen zu lassen. Zum Beispiel
+        kann man es so verwenden:
+    </p>
+    <ul>
+        <li>Den ersten Buchstaben oder die erste Zeile eines Elements anders aussehen lassen.</li>
+        <li>Dinge vor oder nach einem Element einfügen.</li>
+    </ul>
+    <p>Pseudo-elements haben folgenden Syntax:</p>
+    <div class="code-block">
+        <p>
+            selector::pseudo-element {<br>
+            property: value;<br>
+            }
+        </p>
+    </div>
 
-	<h3>Das ::first-line pseudo-element</h3>
-	<p>
-		Mit dem <code>::first-line</code> pseudo-element kann man das Aussehen der ersten Zeile eines Text-Elements (z.B. p-Element) verändern.
-	</p>
-	<div class="code-block">
-		<p>
-			p::first-line {<br>
-				color: red;<br>
-				font-variant: small-caps;<br>
-			}
-		</p>
-	</div>
-	<p class="fli">
-		Culpa Lorem eu deserunt laborum quis irure exercitation non pariatur sit. Et nisi incididunt non duis nulla culpa. Dolor aliquip sunt eu aliquip eu Lorem dolore esse. Deserunt sit sint aliqua amet veniam. Aute excepteur culpa est id nulla adipisicing enim esse. Fugiat cillum nostrud ut sint sint et nulla.
-	</p>
+    <h3>Das ::first-line pseudo-element</h3>
+    <p>
+        Mit dem <code>::first-line</code> pseudo-element kann man das Aussehen der ersten Zeile eines Text-Elements
+        (z.B. p-Element) verändern.
+    </p>
+    <div class="code-block">
+        <p>
+            p::first-line {<br>
+            color: red;<br>
+            font-variant: small-caps;<br>
+            }
+        </p>
+    </div>
+    <p class="fli">
+        Culpa Lorem eu deserunt laborum quis irure exercitation non pariatur sit. Et nisi incididunt non duis nulla
+        culpa. Dolor aliquip sunt eu aliquip eu Lorem dolore esse. Deserunt sit sint aliqua amet veniam. Aute excepteur
+        culpa est id nulla adipisicing enim esse. Fugiat cillum nostrud ut sint sint et nulla.
+    </p>
 
-	<h3>Das ::first-letter pseudo-element</h3>
-	<p>
-		Mit dem <code>::first-letter</code> pseudo-element kann man das Aussehen des ersten Buchstaben eines Text-Elements (z.B. p-Element) verändern.
-	</p>
-	<div class="code-block">
-		<p>
-			p::first-letter {<br>
-				color: red;<br>
-				font-variant: xx-large;<br>
-			}
-		</p>
-	</div>
-	<p class="fle">
-		Nulla nisi eu laboris reprehenderit nisi incididunt ad.
-	</p>
-	<br>
+    <h3>Das ::first-letter pseudo-element</h3>
+    <p>
+        Mit dem <code>::first-letter</code> pseudo-element kann man das Aussehen des ersten Buchstaben eines
+        Text-Elements (z.B. p-Element) verändern.
+    </p>
+    <div class="code-block">
+        <p>
+            p::first-letter {<br>
+            color: red;<br>
+            font-variant: xx-large;<br>
+            }
+        </p>
+    </div>
+    <p class="fle">
+        Nulla nisi eu laboris reprehenderit nisi incididunt ad.
+    </p>
+    <br>
 
-	<p>
-		Man kann pseudo-elements auch mit CSS-classes kombinieren und man kann mehrere pseudo-elements bei dem selben Element verwenden.
-	</p>
-	
-	<h3>Das ::before pseudo-element</h3>
-	<p>
-		Mit dem <code>::before</code> pseudo-element kann man vor einem Element Dinge einfügen. Im Beispiel wird vor dem p-Element mit der "test1"-id ein Bild eingefügt.
-	</p>
-	<div class="code-block">
-		<p>
-			p#test1::before {<br>
-				content: url("../../../../images/home-exercises/SuitImageSmall.jpg");<br>
-			}
-		</p>
-	</div>
-	<p id="test1">Dieses p-Element hat die id "test1".</p>
+    <p>
+        Man kann pseudo-elements auch mit CSS-classes kombinieren und man kann mehrere pseudo-elements bei dem selben
+        Element verwenden.
+    </p>
 
-	<h3>Das ::after pseudo-element</h3>
-	<p>
-		Das <code>::after</code> pseudo-element funktioniert nach dem selben Prinzip wie das <code>::before</code> pseudo-element, nur dass etwas nach dem Element eingefügt wird.
-	</p>
-	<div class="code-block">
-		<p>
-			p#test2::after {<br>
-				content: url("../../../../images/home-exercises/SuitImageSmall.jpg");<br>
-			}
-		</p>
-	</div>
-	<p id="test2">Dieses p-Element hat die id "test2".</p>
+    <h3>Das ::before pseudo-element</h3>
+    <p>
+        Mit dem <code>::before</code> pseudo-element kann man vor einem Element Dinge einfügen. Im Beispiel wird vor dem
+        p-Element mit der "test1"-id ein Bild eingefügt.
+    </p>
+    <div class="code-block">
+        <p>
+            p#test1::before {<br>
+            content: url("../../../../images/home-exercises/SuitImageSmall.jpg");<br>
+            }
+        </p>
+    </div>
+    <p id="test1">Dieses p-Element hat die id "test1".</p>
 
-	<h3>Das ::selection pseudo-element</h3>
-	<p>
-		Mit dem <code>::selection</code> pseudo-element steuert man den Teil eines Elements an, der vom Benutzer ausgewählt ist.
-	</p>
-	<div class="code-block">
-		<p>
-			p#test3::selection {<br>
-				color: tomato;<br>
-				background: #f4a261;<br>
-			}
-		</p>
-	</div>
-	<p id="test3">
-		Wählen Sie in diesem p-Element etwas aus, um das Beispiel zu testen.
-	</p>
+    <h3>Das ::after pseudo-element</h3>
+    <p>
+        Das <code>::after</code> pseudo-element funktioniert nach dem selben Prinzip wie das <code>::before</code>
+        pseudo-element, nur dass etwas nach dem Element eingefügt wird.
+    </p>
+    <div class="code-block">
+        <p>
+            p#test2::after {<br>
+            content: url("../../../../images/home-exercises/SuitImageSmall.jpg");<br>
+            }
+        </p>
+    </div>
+    <p id="test2">Dieses p-Element hat die id "test2".</p>
+
+    <h3>Das ::selection pseudo-element</h3>
+    <p>
+        Mit dem <code>::selection</code> pseudo-element steuert man den Teil eines Elements an, der vom Benutzer
+        ausgewählt ist.
+    </p>
+    <div class="code-block">
+        <p>
+            p#test3::selection {<br>
+            color: tomato;<br>
+            background: #f4a261;<br>
+            }
+        </p>
+    </div>
+    <p id="test3">
+        Wählen Sie in diesem p-Element etwas aus, um das Beispiel zu testen.
+    </p>
 </body>
+
 </html>
