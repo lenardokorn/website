@@ -1,67 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>CSS-Eigenschaft: Absolute und relative Positionierung</title>
-	<link rel="stylesheet" href="../../../css/home-exercises/css-properties-style.css">
-	<style>
-		div {
-			height: 120px;
-			width: 200px;
-			text-align: center;
-			padding: 10px;
-		}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Eigenschaft: Absolute und relative Positionierung</title>
+    <link rel="stylesheet" href="../../../css/home-exercises/css-properties-style.css">
+    <style>
+        div {
+            height: 120px;
+            width: 200px;
+            text-align: center;
+            padding: 10px;
+        }
 
-		div h1 {
-			font-size: 27px;
-			font-weight: normal;
-		}
+        div h1 {
+            font-size: 27px;
+            font-weight: normal;
+        }
 
-		#div1 {
-			background-color: #ace7ff;
-			position: absolute;
-		}
+        #div1 {
+            background-color: #ace7ff;
+            position: absolute;
+        }
 
-		#div2 {
-			background-color: #aff8db;
-			position: absolute;
-			left: 400px;
-			top: 200px;
-		}
-		
-		#div3 {
-			background-color: #c5a3ff;
-			position: relative;
-			left: 50px;
-			top: 100px;
-		}
-		
-		#div4 {
-			background-color: #ffcbc1;
-			position: fixed;
-			left: 350px;
-			top: 300px;
-		}
-	</style>
+        #div2 {
+            background-color: #aff8db;
+            position: absolute;
+            left: 400px;
+            top: 200px;
+        }
+
+        #div3 {
+            background-color: #c5a3ff;
+            position: relative;
+            left: 50px;
+            top: 100px;
+        }
+
+        #div4 {
+            background-color: #ffcbc1;
+            position: fixed;
+            left: 350px;
+            top: 300px;
+        }
+    </style>
 </head>
+
 <body>
-	<h1>Absolute und relative Positionierung</h1>
-	
-	<div id="div1">
-		<h1>Erster Layer</h1>
-	</div>
-	<div id="div2">
-		<h1>Zweiter Layer</h1>
-		<p>position: absolute; left: 400px; top: 200px;</p>
-	</div>
-	<div id="div3">
-		<h1>Dritter Layer</h1>
-		<p>position: relative; left: 50px; top: 100px;</p>
-	</div>
-	<div id="div4">
-		<h1>Vierter Layer</h1>
-		<p>position: fixed; left: 350px; top: 300px;</p>
-	</div>
+    <h1>Absolute und relative Positionierung</h1>
+
+    <div id="div1">
+        <h1>Erster Layer</h1>
+    </div>
+    <div id="div2">
+        <h1>Zweiter Layer</h1>
+        <p>position: absolute; left: 400px; top: 200px;</p>
+    </div>
+    <div id="div3">
+        <h1>Dritter Layer</h1>
+        <p>position: relative; left: 50px; top: 100px;</p>
+    </div>
+    <div id="div4">
+        <h1>Vierter Layer</h1>
+        <p>position: fixed; left: 350px; top: 300px;</p>
+    </div>
 </body>
+
 </html>

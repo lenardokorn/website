@@ -1,218 +1,218 @@
-@import url("https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic");
-@import url("https://fonts.googleapis.com/css?family=Saira:100,200,300,regular,500,600,700,800,900");
+@import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic');
+@import url('https://fonts.googleapis.com/css?family=Saira:100,200,300,regular,500,600,700,800,900');
 
 body {
-	font-family: "Inter";
+    font-family: 'Inter';
 }
 
 ul {
-	list-style-type: none;
+    list-style-type: none;
 }
 
 li i {
-	color: #e84148;
-	margin-right: 2%;
+    color: #e84148;
+    margin-right: 2%;
 }
 
 #johann {
-	background: -webkit-linear-gradient(right, #d3862f, #ec5628);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	text-decoration: none;
+    background: -webkit-linear-gradient(right, #d3862f, #ec5628);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
 }
 
 #johann:hover {
-	text-decoration-line: underline;
-	text-decoration-color: #ec8028;
-	text-decoration-thickness: 15%;
+    text-decoration-line: underline;
+    text-decoration-color: #ec8028;
+    text-decoration-thickness: 15%;
 }
 
 #weekend-logo-original {
-	background-image: url("../../images/home-exercises/weekend/weekend-logo-original.png");
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-	width: 460px;
-	height: 140px;
+    background-image: url('../../images/home-exercises/weekend/weekend-logo-original.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 460px;
+    height: 140px;
 }
 
 #weekend-logo-main {
-	background-color: white;
-	width: 460px;
-	height: 140px;
+    background-color: white;
+    width: 460px;
+    height: 140px;
 }
 
 #weekend-original {
-	background-image: url("../../images/home-exercises/weekend/original.jpg");
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-	width: 460px;
-	height: 650px;
+    background-image: url('../../images/home-exercises/weekend/original.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 460px;
+    height: 650px;
 }
 
 #rotated {
-	transform-origin: left top;
-	transform: rotate(-3deg);
+    transform-origin: left top;
+    transform: rotate(-3deg);
 }
 
 #styria {
-	font-family: "Montserrat";
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 80%;
-	color: #b6b7b7;
-	padding-top: 7%;
-	padding-left: 3%;
-	letter-spacing: -0.5px;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 80%;
+    color: #b6b7b7;
+    padding-top: 7%;
+    padding-left: 3%;
+    letter-spacing: -0.5px;
 }
 
 #edition-information {
-	font-family: "Montserrat";
-	text-transform: uppercase;
-	font-size: 47.5%;
-	padding-left: 67.5%;
-	position: relative;
-	top: -15px;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-size: 47.5%;
+    padding-left: 67.5%;
+    position: relative;
+    top: -15px;
 }
 
 #weekend {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 650%;
-	font-weight: 900;
-	letter-spacing: -9px;
-	position: relative;
-	top: -45px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 650%;
+    font-weight: 900;
+    letter-spacing: -9px;
+    position: relative;
+    top: -45px;
 }
 
 #week {
-	color: #bc0b13;
+    color: #bc0b13;
 }
 
 #subheading {
-	background-color: white;
-	width: 100%;
-	position: relative;
-	top: -75px;
-	text-transform: uppercase;
-	padding-top: 0;
-	padding-left: 3%;
+    background-color: white;
+    width: 100%;
+    position: relative;
+    top: -75px;
+    text-transform: uppercase;
+    padding-top: 0;
+    padding-left: 3%;
 }
 
 #subheading-1 {
-	font-family: "Montserrat";
-	margin-right: 1%;
-	font-size: 90%;
-	font-weight: 700;
-	letter-spacing: -1px;
+    font-family: 'Montserrat';
+    margin-right: 1%;
+    font-size: 90%;
+    font-weight: 700;
+    letter-spacing: -1px;
 }
 
 #subheading-2 {
-	font-family: "Saira";
-	color: #bc0b13;
-	font-size: 180%;
-	letter-spacing: 2px;
+    font-family: 'Saira';
+    color: #bc0b13;
+    font-size: 180%;
+    letter-spacing: 2px;
 }
 
 #weekend-main {
-	background-image: url("../../images/home-exercises/weekend/background-final.png");
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-	width: 460px;
-	height: 650px;
+    background-image: url('../../images/home-exercises/weekend/background-final.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 460px;
+    height: 650px;
 }
 
 #heading {
-	font-family: "Montserrat";
-	font-size: 390%;
-	font-weight: 800;
-	letter-spacing: 0px;
-	line-height: 93%;
-	padding-top: 19%;
-	padding-left: 7%;
+    font-family: 'Montserrat';
+    font-size: 390%;
+    font-weight: 800;
+    letter-spacing: 0px;
+    line-height: 93%;
+    padding-top: 19%;
+    padding-left: 7%;
 }
 
 #red-heading {
-	color: #e84148;
+    color: #e84148;
 }
 
 #white-heading {
-	color: white;
-	text-decoration-line: underline;
-	text-decoration-thickness: 10%;
+    color: white;
+    text-decoration-line: underline;
+    text-decoration-thickness: 10%;
 }
 
 #list {
-	font-family: "Montserrat";
-	font-size: 140%;
-	font-weight: 600;
-	letter-spacing: 1px;
-	color: white;
-	padding-top: 11%;
-	padding-left: 1%;
+    font-family: 'Montserrat';
+    font-size: 140%;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+    padding-top: 11%;
+    padding-left: 1%;
 }
 
 #slogan {
-	font-family: "Montserrat";
-	font-size: 80%;
-	font-weight: 700;
-	line-height: 93%;
-	position: relative;
-	width: 15%;
-	top: -3.5%;
-	left: 77%;
-	transform-origin: left top;
-	transform: rotate(-12deg);
-	text-align: center;
+    font-family: 'Montserrat';
+    font-size: 80%;
+    font-weight: 700;
+    line-height: 93%;
+    position: relative;
+    width: 15%;
+    top: -3.5%;
+    left: 77%;
+    transform-origin: left top;
+    transform: rotate(-12deg);
+    text-align: center;
 }
 
 #red-slogan {
-	color: #e84148;
+    color: #e84148;
 }
 
 #white-slogan {
-	color: white;
+    color: white;
 }
 
 #information {
-	font-family: "Montserrat";
-	text-align: center;
-	font-weight: 600;
-	letter-spacing: -0.5px;
-	font-size: 60%;
-	position: relative;
-	top: -5%;
+    font-family: 'Montserrat';
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    font-size: 60%;
+    position: relative;
+    top: -5%;
 }
 
 #information a {
-	font-weight: bold;
-	color: black;
-	text-decoration: none;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
 }
 
 #government-logo {
-	background-color: white;
-	text-align: center;
-	font-family: "Montserrat";
-	font-weight: 600;
-	vertical-align: middle;
-	font-size: 60%;
-	position: relative;
-	letter-spacing: -0.5px;
-	top: -5%;
-	height: 7.5%;
-	padding-top: 2%;
+    background-color: white;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    vertical-align: middle;
+    font-size: 60%;
+    position: relative;
+    letter-spacing: -0.5px;
+    top: -5%;
+    height: 7.5%;
+    padding-top: 2%;
 }
 
 #government-logo img {
-	vertical-align: middle;
-	height: 12.5px;
-	margin-right: 1.5%;
+    vertical-align: middle;
+    height: 12.5px;
+    margin-right: 1.5%;
 }
 
 #government-logo a {
-	color: black;
-	text-decoration: none;
+    color: black;
+    text-decoration: none;
 }

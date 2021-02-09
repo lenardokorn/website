@@ -1,48 +1,49 @@
-@import url("https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900");
+@import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900');
 
-html, body {
-	margin: 0;
-	font-family: "Inter";
-	background-color: black;
+html,
+body {
+    margin: 0;
+    font-family: 'Inter';
+    background-color: black;
 }
 
 #main {
-	background: url("../../../images/SuitImage.jpg");
-	background-position: bottom;
-	background-size: cover;
-	background-repeat: no-repeat;
-	width: 100vw;
-	height: 100vh;
-	display: table;
-	position: relative;
-	transition: opacity 0.5s ease-in-out, background-position 0.5s ease-in-out;
+    background: url('../../../images/SuitImage.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: table;
+    position: relative;
+    transition: opacity 0.5s ease-in-out, background-position 0.5s ease-in-out;
 }
 
 #main:hover {
-	opacity: 0.5;
-	background-position: center;
+    opacity: 0.5;
+    background-position: center;
 }
 
 #button {
-	background-color: white;
-	border-radius: 10px;
-	border: 3px solid #84a98c;
-	color: #0f1310;
-	padding: 15px 30px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 22px;
-	font-weight: 600;
-	position: absolute;
-	right: 50%;
-	top: 50%;
-	transform: translateX(50%) translateY(-50%);
-	transition-duration: 0.25s;
+    background-color: white;
+    border-radius: 10px;
+    border: 3px solid #84a98c;
+    color: #0f1310;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 600;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translateX(50%) translateY(-50%);
+    transition-duration: 0.25s;
 }
 
 #button:hover {
-	background-color: #84a98c;
-	color: white;
-	box-shadow: 0 12px 16px 0 #0000003d, 0 17px 50px 0 #00000030;
+    background-color: #84a98c;
+    color: white;
+    box-shadow: 0 12px 16px 0 #0000003d, 0 17px 50px 0 #00000030;
 }

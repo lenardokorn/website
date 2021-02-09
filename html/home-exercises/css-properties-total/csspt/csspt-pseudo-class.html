@@ -1,101 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Pseudo-class</title>
-	<link rel="stylesheet" href="../../../../css/home-exercises/css-properties-total/css-properties-total-layout.css">
-	<style>
-		a.highlight:hover {
-			color: red;
-			font-weight: normal;
-		}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-class</title>
+    <link rel="stylesheet" href="../../../../css/home-exercises/css-properties-total/css-properties-total-layout.css">
+    <style>
+        a.highlight:hover {
+            color: red;
+            font-weight: normal;
+        }
 
-		#tooltip-p {
-			display: none;
-			background-color: #f4a261;
-			padding: 20px;
-		}
-			
-		#tooltip-div:hover #tooltip-p {
-			display: block;
-		}
-	</style>
+        #tooltip-p {
+            display: none;
+            background-color: #f4a261;
+            padding: 20px;
+        }
+
+        #tooltip-div:hover #tooltip-p {
+            display: block;
+        }
+    </style>
 </head>
+
 <body>
-	<h2>Pseudo-class</h2>
+    <h2>Pseudo-class</h2>
 
-	<p>
-		Pseudo-classes werden benutzt, um einen bestimmten Zustand eines Elements zu definieren. So kann man:
-	</p>
-	<ul>
-		<li>Ein Element verändern wenn sich der Mauszeiger darauf befindet.</li>
-		<li>Besuchte und nicht besuchte Links anders aussehen lassen.</li>
-		<li>Ein Element verändern, wenn es im Fokus ist.</li>
-	</ul>
-	<p>
-		Pseudo-classes haben in CSS folgenden Syntax:
-	</p>
-	<div class="code-block">
-		<p>
-			selector:pseudo-class {<br>
-				property: value;<br>
-			}
-		</p>
-	</div>
+    <p>
+        Pseudo-classes werden benutzt, um einen bestimmten Zustand eines Elements zu definieren. So kann man:
+    </p>
+    <ul>
+        <li>Ein Element verändern wenn sich der Mauszeiger darauf befindet.</li>
+        <li>Besuchte und nicht besuchte Links anders aussehen lassen.</li>
+        <li>Ein Element verändern, wenn es im Fokus ist.</li>
+    </ul>
+    <p>
+        Pseudo-classes haben in CSS folgenden Syntax:
+    </p>
+    <div class="code-block">
+        <p>
+            selector:pseudo-class {<br>
+            property: value;<br>
+            }
+        </p>
+    </div>
 
-	<h3>Pseudo-classes bei Links</h3>
-	<ul>
-		<li><code>a:link</code>: nicht besuchter Link.</li>
-		<li><code>a:visited</code>: besuchter Link.</li>
-		<li><code>a:hover</code>: wenn sich Mauszeiger auf Link befindet.</li>
-		<li><code>a:active</code>: ausgewählter Link.</li>
-	</ul>
-	<br>
-	
-	<p>Pseudo-classes können auch mit classes kombiniert werden:</p>
-	<div class="code-block">
-		<p>
-			a.highlight:hover {<br>
-				color: red;<br>
-			}
-		</p>
-	</div>
-	<a href="#" class="highlight">Link mit "highlight" als class</a>
-	<p>
-		Dies funktioniert auch bei anderen Elementen wie z.B. divs.
-	</p>
+    <h3>Pseudo-classes bei Links</h3>
+    <ul>
+        <li><code>a:link</code>: nicht besuchter Link.</li>
+        <li><code>a:visited</code>: besuchter Link.</li>
+        <li><code>a:hover</code>: wenn sich Mauszeiger auf Link befindet.</li>
+        <li><code>a:active</code>: ausgewählter Link.</li>
+    </ul>
+    <br>
 
-	<h3>"Tooltip Hover"</h3>
-	<p>
-		Mit folgendem code erscheint ein p-Element, wenn man über ein div-Element hovert.
-	</p>
-	<div class="code-block">
-		<p>
-			p {<br>
-				display: none;<br>
-				background-color: #f4a261;<br>
-				padding: 20px;<br>
-			}<br>
-			<br>
-			div:hover p {<br>
-				display: block;<br>
-			}
-		</p>
-	</div>
-	<div id="tooltip-div">
-		Hier die Maus bewegen, um das p-Element anzuzeigen.
-		<p id="tooltip-p">Hier ist das p-Element!</p>
-	</div>
+    <p>Pseudo-classes können auch mit classes kombiniert werden:</p>
+    <div class="code-block">
+        <p>
+            a.highlight:hover {<br>
+            color: red;<br>
+            }
+        </p>
+    </div>
+    <a href="#" class="highlight">Link mit "highlight" als class</a>
+    <p>
+        Dies funktioniert auch bei anderen Elementen wie z.B. divs.
+    </p>
 
-	<h3>Die :first-child pseudo-class</h3>
-	<p>
-		Mit der <code>:first-child</code> pseudo-class findet man Elemente, die die ersten children anderer Elemente sind.
-	</p>
+    <h3>"Tooltip Hover"</h3>
+    <p>
+        Mit folgendem code erscheint ein p-Element, wenn man über ein div-Element hovert.
+    </p>
+    <div class="code-block">
+        <p>
+            p {<br>
+            display: none;<br>
+            background-color: #f4a261;<br>
+            padding: 20px;<br>
+            }<br>
+            <br>
+            div:hover p {<br>
+            display: block;<br>
+            }
+        </p>
+    </div>
+    <div id="tooltip-div">
+        Hier die Maus bewegen, um das p-Element anzuzeigen.
+        <p id="tooltip-p">Hier ist das p-Element!</p>
+    </div>
 
-	<h3>Die :lang pseudo-class</h3>
-	<p>
-		Mit der <code>:lang</code> pseudo-class kann man für bestimmte Sprachen Regeln festlegen.
-	</p>
+    <h3>Die :first-child pseudo-class</h3>
+    <p>
+        Mit der <code>:first-child</code> pseudo-class findet man Elemente, die die ersten children anderer Elemente
+        sind.
+    </p>
+
+    <h3>Die :lang pseudo-class</h3>
+    <p>
+        Mit der <code>:lang</code> pseudo-class kann man für bestimmte Sprachen Regeln festlegen.
+    </p>
 </body>
+
 </html>
