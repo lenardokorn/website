@@ -59,6 +59,7 @@
 
             let sundayCnt = 0;
 
+            // Iterate through every first day of each month from 1901 to 2000 and check if it is a sunday
             for (let year = 1901; year <= 2000; year++) {
                 for (let month = 0; month < 12; month++) {
                     if (new Date(year, month, 1).getDay() === 0) {
@@ -70,12 +71,67 @@
             document.problem19.problem19output.value = `From 1 Jan 1901 to 31 Dec 2000 there were ${sundayCnt} sundays on the first day of the month.`;
         }
 
-        function passcodeValidation() {
-            alert('A common security method used for online banking is to ask the user for three random characters from a passcode. For example, if the passcode was 531278, they may ask for the 2nd, 3rd, and 5th characters; the expected reply would be: 317.\nThe text file, keylog.txt, contains fifty successful login attempts.\nGiven that the three characters are always asked for in order, analyse the file so as to determine the shortest possible secret passcode of unknown length.');
+        function permutation() {
+            alert('\"Schreibe eine Funktion Zahlenpermutierer() die eine vierstellige Zahle in jeweils 24 Permutationen ausgibt und diese in einer Area anzeigt. also lies eine vierstellige Zahl ein. Zerlege sie in die einzelnen Ziffern. Und überlege dann wie du sie in 24 Möglichkeiten anzeigen kannst.\"\n© Professor Kohlweg');
 
-            const loginAttempts = [
-                319, 680, 180, 690, 129, 620, 762, 689, 762, 318, 368, 710, 720, 710, 629, 168, 160, 689, 716, 731, 736, 729, 316, 729, 729, 710, 769, 290, 719, 680, 318, 389, 162, 289, 162, 718, 729, 319, 790, 680, 890, 362, 319, 760, 316, 729, 380, 319, 728, 716
-            ];
+            let numberStr = document.problem49.problem49input.value;
+            let permutations = [];
+
+            if (numberStr.length !== 4) {
+                document.problem49.problem49output.value = 'Error: Only enter integers with four digits.';
+                return;
+            }
+
+            for (let i = 1000; i < 10000; i++) {
+                let currentDigits = `${i}`;
+                let numberStrCopy = numberStr;
+
+                for (let j = 0; j < 4; j++) {
+                    if (numberStrCopy.includes(currentDigits[j])) {
+                        numberStrCopy = numberStrCopy.replace(currentDigits[j], '');
+                    }
+                    else {
+                        break;
+                    }
+                    if (j === 3) {
+                        permutations.push(i);
+                    }
+                }
+            }
+
+            document.problem49.problem49output.value = `The ${permutations.length} permutations of ${numberStr} are:\n${permutations}`;
+        }
+
+        function sumOfDivisorsSquared() {
+            alert('For a positive integer n, let σ2(n) be the sum of the squares of its divisors.\nFor example, 10 is divisible by 1, 2, 5 and 10. The sum of the squares of those numbers is:\nσ2(10) = 1 + 4 + 25 + 100 = 130');
+
+            let number = parseInt(document.problem79.problem79input.value);
+            let divisors = [1];
+            let divisorsSquared = [1];
+            let sumOfDivisorsSquared = 1 + number * number;
+
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    divisors.push(i);
+                    divisorsSquared.push(i * i);
+                    sumOfDivisorsSquared += i * i;
+                }
+            }
+            divisors.push(number);
+            divisorsSquared.push(number * number);
+
+            document.problem79.problem79output.value = `${number} is divisible by ${divisors}.\nσ2(${number}) = ${stringWithPlus(divisorsSquared)} = ${sumOfDivisorsSquared}`;
+        }
+
+        function stringWithPlus(array) {
+            let str = '';
+
+            for (let i = 0; i < array.length - 1; i++) {
+                str += `${array[i]} + `;
+            }
+            str += `${array[array.length - 1]}`;
+
+            return str;
         }
     </script>
 </head>
@@ -92,8 +148,8 @@
             </div>
             <div class="col-lg-10 col-md-9 col-sm-12 vcenter">
                 <p class="lead">
-                    Because of some of the problems being extremely difficult in the first place and even harder to
-                    program in JavaScript, I decided to do different ones.
+                    Here are some problems from the website <a href="https://projecteuler.net/" target="_blank"
+                        rel="noopener noreferrer">projecteuler.net</a>.
                 </p>
             </div>
         </div>
@@ -110,12 +166,28 @@
     </div>
 
     <div class="container my-4">
-        <h2>Problem 79 - Passcode Validation</h2>
+        <h2>Problem 49 - Permutations</h2>
+
+        <form name="problem49" action="">
+            <label for="problem49-input">Input</label>
+            <input type="number" name="problem49input" id="problem49-input" placeholder="Enter a number with 4 digits"
+                class="form-control">
+            <label for="problem49-output" class="form-label">Output</label>
+            <textarea name="problem49output" readonly class="form-control" id="problem49-output"></textarea>
+            <input type="button" value="Run" class="btn btn-outline-dark mt-2" onclick="permutation()">
+        </form>
+    </div>
+
+    <div class="container my-4">
+        <h2>Problem 79 - Sum Of Divisors Squared</h2>
 
         <form name="problem79" action="">
+            <label for="problem79-input">Input</label>
+            <input type="number" name="problem79input" id="problem79-input" placeholder="Enter an integer"
+                class="form-control">
             <label for="problem79-output" class="form-label">Output</label>
             <textarea name="problem79output" readonly class="form-control" id="problem79-output"></textarea>
-            <input type="button" value="Run" class="btn btn-outline-dark mt-2" onclick="passcodeValidation()">
+            <input type="button" value="Run" class="btn btn-outline-dark mt-2" onclick="sumOfDivisorsSquared()">
         </form>
     </div>
 
