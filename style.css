@@ -75,20 +75,27 @@ body.dark {
 #landing-background {
     background: url('https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260') no-repeat center center fixed;
     display: table;
-    height: 97vh;
+    height: 100vh;
     width: 100%;
     position: relative;
     background-size: cover;
 }
 
-#landing-text {
+.landing-text {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
     position: relative;
+    color: var(--background-color);
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: color var(--theme-transition-delay) ease, background-color var(--theme-transition-delay) ease;
 }
 
-#landing-text > h1 {
+.landing-text-dark {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.landing-text > h1 {
     font-family: 'Montserrat';
     font-weight: 700;
     text-transform: uppercase;
@@ -102,7 +109,7 @@ body.dark {
 #arrow-down {
     position: absolute;
     bottom: 0;
-    padding-bottom: 3.5rem;
+    padding-bottom: 2rem;
     width: 100%;
     font-size: 150%;
     animation-name: arrowDown;
@@ -113,17 +120,40 @@ body.dark {
 }
 
 #arrow-down > a {
+    color: var(--background-color);
+    transition: color var(--theme-transition-delay) ease;
+}
+
+.card {
+    transition: color var(--theme-transition-delay) ease, background-color var(--theme-transition-delay) ease;
+}
+
+.footer {
+    transition: color var(--theme-transition-delay) ease, background-color var(--theme-transition-delay) ease;
+}
+
+footer a {
+    text-decoration: none;
     color: var(--text-color);
+    transition: color var(--theme-transition-delay) ease;
+}
+
+footer a:hover {
+    color: #7a7a7a;
+}
+
+footer a .fa {
+    font-size: 150%;
 }
 
 @keyframes arrowDown {
     25% {
-        padding-bottom: 3.5rem;
+        padding-bottom: 2rem;
     }
     50% {
-        padding-bottom: 2.5rem;
+        padding-bottom: 1rem;
     }
     75% {
-        padding-bottom: 3.5rem;
+        padding-bottom: 2rem;
     }
 }
