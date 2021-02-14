@@ -1,3 +1,11 @@
+// Make sure checkbox is always unchecked on page load
+window.onload = onPageLoad();
+
+function onPageLoad() {
+    document.getElementById('checkbox').checked = false;
+}
+
+// Change theme when checkbox is clicked
 const checkbox = document.getElementById('checkbox');
 
 checkbox.addEventListener('change', () => {

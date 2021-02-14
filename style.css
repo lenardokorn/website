@@ -50,6 +50,7 @@ body.dark {
     border-radius: 50px;
     position: relative;
     transition: background-color var(--theme-transition-delay) ease;
+    cursor: pointer;
 }
 
 .ball {
@@ -73,7 +74,7 @@ body.dark {
 
 /* Landing Page */
 #landing-background {
-    background: url('https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260') no-repeat center center fixed;
+    background: url('https://images.pexels.com/photos/5847990/pexels-photo-5847990.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center fixed;
     display: table;
     height: 100vh;
     width: 100%;
@@ -86,13 +87,13 @@ body.dark {
     text-align: center;
     vertical-align: middle;
     position: relative;
-    color: var(--background-color);
-    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--text-color);
+    background-color: rgba(255, 255, 255, 0.5);
     transition: color var(--theme-transition-delay) ease, background-color var(--theme-transition-delay) ease;
 }
 
 .landing-text-dark {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .landing-text > h1 {
@@ -120,7 +121,7 @@ body.dark {
 }
 
 #arrow-down > a {
-    color: var(--background-color);
+    color: var(--text-color);
     transition: color var(--theme-transition-delay) ease;
 }
 
@@ -135,14 +136,15 @@ body.dark {
 footer a {
     text-decoration: none;
     color: var(--text-color);
-    transition: color var(--theme-transition-delay) ease;
+    transition: color 0.25s ease;
 }
 
 footer a:hover {
     color: #7a7a7a;
 }
 
-footer a .fa {
+footer a .fa,
+footer a .fas {
     font-size: 150%;
 }
 
