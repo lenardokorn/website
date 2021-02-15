@@ -14,16 +14,22 @@ checkbox.addEventListener('change', () => {
     document.querySelector('.navbar').classList.toggle('navbar-dark');
     document.querySelector('.navbar').classList.toggle('bg-dark');
     document.querySelector('#projects-dropdown').classList.toggle('dropdown-menu-dark');
-    document.querySelector('.landing-text').classList.toggle('landing-text-dark');
+    try {
+        document.querySelector('.landing-text').classList.toggle('landing-text-dark');
+    } catch (error) {}
     document.querySelector('.footer').classList.toggle('bg-dark');
 
     // Multiple elements
-    let cards = document.getElementsByClassName('card');
-    for (let i = 0; i < cards.length; i++) {
-        cards[i].classList.toggle('bg-dark');
-    }
-    let buttons = document.getElementsByClassName('btn');
-    for (let i = 0; i < buttons.length; i++) {
-        buttons[i].classList.toggle('btn-dark');
-    }
+    try {
+        let cards = document.getElementsByClassName('card');
+        for (let i = 0; i < cards.length; i++) {
+            cards[i].classList.toggle('bg-dark');
+        }
+    } catch (error) {}
+    try {
+        let buttons = document.getElementsByClassName('btn');
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].classList.toggle('btn-dark');
+        }
+    } catch (error) {}
 });
