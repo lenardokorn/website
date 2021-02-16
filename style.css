@@ -88,12 +88,12 @@ body.dark {
     vertical-align: middle;
     position: relative;
     color: var(--text-color);
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.75);
     transition: color var(--theme-transition-delay) ease, background-color var(--theme-transition-delay) ease;
 }
 
 .dark-background {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 .landing-text > h1 {
