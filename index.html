@@ -8,12 +8,13 @@
     <meta name="description" content="Lenard Okorn's landing page.">
     <meta name="keywords"
         content="Lenard Okorn, HTL Kaindorf, Coding, Webdesign, Web Development, Programming, Blender, Video Editing, School">
-    <script src="https://kit.fontawesome.com/6adbb9e6d1.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="js/scroll-to-anchor.js"></script>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6adbb9e6d1.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="js/scroll-to-anchor.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BNH56BM7JJ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -25,122 +26,147 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
         <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="http://okoled19.bplaced.net/" class="navbar-brand">
-                    <h1>LO</h1>
-                </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse-main">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="http://okoled19.bplaced.net">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="html/school.html">School</a></li>
-                    <li><a href="html/personal-projects.html">Personal Projects</a></li>
-                    <li><a href="#footer">Contact</a></li>
+            <a class="navbar-brand" href="#">
+                <img src="images/LenardOkornLogoBackground.png" alt="Lenard Okorn" style="height: 45px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#projects" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Projects
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="projects-dropdown">
+                            <li><a class="dropdown-item" href="html/school.html">School</a></li>
+                            <li><a class="dropdown-item" href="html/personal-projects.html">Personal Projects</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
                 </ul>
+                <div>
+                    <input type="checkbox" class="checkbox" id="checkbox">
+                    <label for="checkbox" class="label">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <div class="ball"></div>
+                    </label>
+                </div>
             </div>
         </div>
     </nav>
 
-    <div id="home">
-        <div class="landing-text">
-            <h1>LENARD OKORN</h1>
-            <h3>Yup, that's me.</h3>
+    <main>
+        <div id="landing-background">
+            <div class="landing-text">
+                <h1>Lenard Okorn</h1>
+                <div id="subheading"></div>
+                <div id="arrow-down">
+                    <a href="#about"><i class="fas fa-chevron-down"></i></a>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="padding" id="about">
-        <div class="container">
-            <div class="row vcenter">
-                <div class="col-sm-12">
-                    <div class="subheading">
-                        <h2>About</h2>
+        <div id="about" class="container my-5">
+            <h1 class="text-center my-3">About</h1>
+            <div class="row my-5">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <img src="images/SuitImage.jpg" alt="" class="img-fluid rounded my-3">
+                </div>
+                <div class="col-lg-9 col-md-6 col-sm-12 d-flex align-items-center">
+                    <div class="container text-center my-3">
+                        <h2>Hello, I'm Lenard!</h2>
+                        <p class="lead">
+                            I'm currently attending <a href="https://www.htl-kaindorf.at" target="_blank"
+                                rel="noopener noreferrer">HTL Kaindorf</a>. My hobbies are playing video games, watching
+                            Netflix, creating stuff in Blender and editing videos.
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="row vcenter">
-                <div class="col-sm-6">
-                    <img src="images/SuitImage.jpg" alt="" class="img-responsive">
-                </div>
-                <div class="col-sm-6 text-center">
-                    <h3>Hello, I'm Lenard.</h3>
-                    <br>
-                    <p class="lead">
-                        I'm currently attending the HTL Kaindorf. My hobbies are playing video games, watching Netflix,
-                        creating stuff in Blender and editing videos.
-                    </p>
-                    <br>
-                    <p class="lead">
-                        People say nothing is impossible, <br>but I do nothing every day.
-                    </p>
-                </div>
-            </div>
         </div>
-    </div>
 
-    <hr>
+        <hr>
 
-    <div class="padding">
-        <div class="container">
-            <div class="row vcenter">
-                <div class="col-sm-12">
-                    <div class="subheading">
-                        <h2>Projects</h2>
+        <div id="projects" class="container my-5">
+            <h1 class="text-center my-3">Projects</h1>
+            <div class="row my-5">
+                <div class="col-md-6 col-sm-12">
+                    <div class="card my-3 bg-light">
+                        <img src="images/school-compressed.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title">School</h3>
+                            <p class="card-text lead">
+                                You're my teacher or you just want to take a look at my homework?
+                            </p>
+                            <a href="html/school.html" class="btn btn-lg btn-light btn-dark">Go there</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="card my-3 bg-light">
+                        <img src="images/personal-projects-compressed.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h3 class="card-title">Personal Projects</h3>
+                            <p class="card-text lead">
+                                You want to see what I do when I'm not currently doing homework?
+                            </p>
+                            <a href="html/personal-projects.html" class="btn btn-lg btn-light btn-dark">Go there</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row vcenter">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <h3>School</h3>
-                    <p class="lead">
-                        You're my teacher or you just want to take a look at my homework?
-                    </p>
-                    <a href="html/school.html" type="button" class="btn btn-default btn-lg">Take me there</a>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <img src="images/school-compressed.jpg" alt="" class="img-responsive">
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <h3>Personal Projects</h3>
-                    <p class="lead">
-                        You want to see what I do when I'm not currently doing homework?
-                    </p>
-                    <a href="html/personal-projects.html" type="button" class="btn btn-default btn-lg">Take me there</a>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <img src="images/personal-projects-compressed.jpg" alt="" class="img-responsive">
-                </div>
-            </div>
         </div>
-    </div>
+    </main>
 
-    <footer class="container-fluid text-center" id="footer">
-        <div class="row">
-            <div class="col-sm-4">
-                <h3>Contact Me</h3>
-                <br>
-                <h4><a href="mailto:okoled19@htl-kaindorf.at"><i class="fas fa-envelope"></i>
-                        okoled19@htl-kaindorf.at</a></h4>
-            </div>
-            <div class="col-sm-4">
-                <h3>Social Media</h3>
-                <a href="https://twitter.com/1tzL3nny" target="_blank" class="fa fa-twitter"></a>
-                <a href="https://www.instagram.com/itz.lenny/" target="_blank" class="fa fa-instagram"></a>
-                <a href="mailto:lenardokorn@gmail.com" class="fa fa-google"></a>
-            </div>
-            <div class="col-sm-4">
-                <h1>LENARD OKORN</h1>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container text-center">
+            <h4 id="contact" class="mb-3">Contact</h4>
+            <div class="row mt-3">
+                <div class="col-1"></div>
+                <div class="col-2">
+                    <a href="mailto:okoled19@htl-kaindorf.at"><i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="https://twitter.com/1tzL3nny" target="_blank" rel="noopener noreferrer"><i
+                            class="fa fa-twitter"></i></a>
+                </div>
+                <div class="col-2">
+                    <a href="https://www.instagram.com/itz.lenny/" target="_blank" rel="noopener noreferrer"><i
+                            class="fa fa-instagram"></i></a>
+                </div>
+                <div class="col-2">
+                    <a href="mailto:lenardokorn@gmail.com"><i class="fa fa-google"></i></a>
+                </div>
+                <div class="col-2">
+                    <a href="https://github.com/lenardokorn" target="_blank" rel="noopener noreferrer"><i
+                            class="fa fa-github"></i></a>
+                </div>
+                <div class="col-1"></div>
             </div>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="js/dark-mode-toggle.js"></script>
+    <script src="js/typewriter.js"></script>
 </body>
 
 </html>
