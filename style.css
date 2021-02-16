@@ -92,7 +92,7 @@ body.dark {
     transition: color var(--theme-transition-delay) ease, background-color var(--theme-transition-delay) ease;
 }
 
-.landing-text-dark {
+.dark-background {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -158,4 +158,59 @@ footer a .fas {
     75% {
         padding-bottom: 2rem;
     }
+}
+
+/* Personal Projects */
+.project-navigation-anchor {
+    text-decoration-line: none;
+    color: var(--background-color);
+}
+
+.project-navigation-anchor:hover {
+    color: var(--background-color);
+}
+
+.project-navigation {
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    border-radius: 0.5rem;
+    transition: transform 0.1s ease, color var(--theme-transition-delay) ease, background-color var(--theme-transition-delay) ease;
+}
+
+.project-navigation > i {
+    font-size: 150%;
+}
+
+.light-background {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.coding-projects {
+    background: url('images/personsal-projects/navigation/coding-projects.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 0.5rem;
+    transition: opacity 0.25s ease;
+}
+
+.blender {
+    background: url('images/personal-projects-compressed.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 0.5rem;
+    transition: opacity 0.25s ease;
+}
+
+.videos {
+    background: url('images/personsal-projects/navigation/videos.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 0.5rem;
+    transition: opacity 0.25s ease;
+}
+
+.coding-projects:hover,
+.blender:hover,
+.videos:hover {
+    opacity: 0.75;
 }

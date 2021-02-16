@@ -15,7 +15,7 @@ checkbox.addEventListener('change', () => {
     document.querySelector('.navbar').classList.toggle('bg-dark');
     document.querySelector('#projects-dropdown').classList.toggle('dropdown-menu-dark');
     try {
-        document.querySelector('.landing-text').classList.toggle('landing-text-dark');
+        document.querySelector('.landing-text').classList.toggle('dark-background');
     } catch (error) {}
     document.querySelector('.footer').classList.toggle('bg-dark');
 
@@ -30,6 +30,12 @@ checkbox.addEventListener('change', () => {
         let buttons = document.getElementsByClassName('btn');
         for (let i = 0; i < buttons.length; i++) {
             buttons[i].classList.toggle('btn-dark');
+        }
+    } catch (error) {}
+    try {
+        let buttons = document.getElementsByClassName('project-navigation');
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].classList.toggle('light-background');
         }
     } catch (error) {}
 });
