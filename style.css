@@ -129,6 +129,33 @@ body.dark {
     transition: color var(--theme-transition-delay) ease, background-color var(--theme-transition-delay) ease;
 }
 
+.anchor {
+    color: var(--text-color);
+    text-decoration: none;
+    font-style: italic;
+    display: inline-block;
+    transition: color var(--theme-transition-delay) ease;
+}
+
+.anchor:hover,
+.anchor:focus {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.anchor::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: width 0.15s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.anchor:hover::after {
+    width: 100%;
+}
+
 .footer {
     transition: color var(--theme-transition-delay) ease, background-color var(--theme-transition-delay) ease;
 }
