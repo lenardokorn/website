@@ -1,15 +1,20 @@
-// Make sure checkbox is always unchecked on page load
-window.onload = onPageLoad();
-
-function onPageLoad() {
-    document.getElementById('checkbox').checked = false;
+// * Add cookie which stores theme settings, so that it can be used to set the theme according to the user's preference
+function setTheme(themeName) {
+    let d = new Date();
+    d.setTime(d.getTime() + 365 * 24 * 60 * 60 * 1000);
+    document.cookie = 'theme=' + themeName + '; expires=' + d.toUTCString + '; path=/;';
 }
 
-// Change theme when checkbox is clicked
-const checkbox = document.getElementById('checkbox');
+// * Function to get value of theme cookie
+function getTheme() {
+    if (!document.cookie.includes('theme=')) {
+        return 'l';
+    }
+    return document.cookie.substring(document.cookie.indexOf('theme=') + 6, document.cookie.indexOf('theme=') + 7);
+}
 
-checkbox.addEventListener('change', () => {
-    // Single elements
+function toggleTheme() {
+    // * Single elements
     document.body.classList.toggle('dark');
     document.querySelector('.navbar').classList.toggle('navbar-dark');
     document.querySelector('.navbar').classList.toggle('bg-dark');
@@ -19,7 +24,7 @@ checkbox.addEventListener('change', () => {
     } catch (error) {}
     document.querySelector('.footer').classList.toggle('bg-dark');
 
-    // Multiple elements
+    // * Multiple elements
     try {
         let cards = document.getElementsByClassName('card');
         for (let i = 0; i < cards.length; i++) {
@@ -38,4 +43,28 @@ checkbox.addEventListener('change', () => {
             buttons[i].classList.toggle('light-background');
         }
     } catch (error) {}
+}
+
+const checkbox = document.getElementById('checkbox');
+window.onload = onPageLoad();
+
+function onPageLoad() {
+    if (getTheme() === 'd') {
+        checkbox.checked = true;
+        toggleTheme();
+    } else {
+        checkbox.checked = false;
+    }
+}
+
+// * Change theme when checkbox is clicked
+checkbox.addEventListener('change', () => {
+    // * Change checkbox according to cookie
+    if (document.body.classList.length === 0) {
+        setTheme('d');
+    } else {
+        setTheme('l');
+    }
+
+    toggleTheme();
 });
