@@ -18,6 +18,27 @@
 </head>
 
 <body>
+    <div class="modal fade" id="cookie-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel"><i class="fas fa-cookie-bite"></i> Cookies</h5>
+                    <button type="button" class="btn-close cookies-understood" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    This site uses cookies to enhance your experience. (Which means storing your theme preference.) By
+                    using this site you agree to its use of cookies.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark cookies-understood"
+                        data-bs-dismiss="modal">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="../index.html">
@@ -267,6 +288,7 @@
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
     <script src="../js/dark-mode-toggle.js"></script>
+    <script src="../js/cookies.js"></script>
 </body>
 
 </html>
