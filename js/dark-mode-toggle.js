@@ -2,7 +2,7 @@
 function setTheme(themeName) {
     let d = new Date();
     d.setTime(d.getTime() + 365 * 24 * 60 * 60 * 1000);
-    document.cookie = 'theme=' + themeName + '; expires=' + d.toUTCString + '; path=/;';
+    document.cookie = `theme=${themeName}; expires=${d.toUTCString()}; path=/;`;
 }
 
 // * Function to get value of theme cookie
