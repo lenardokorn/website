@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Lenard Okorn's personal website",
   "scripts": {
-    "dev": "next dev -H 0.0.0.0",
+    "dev": "next dev",
     "build": "next build",
-    "prettier": "prettier -write .",
-    "lint": "next lint"
+    "start": "next start",
+    "lint": "next lint",
+    "prettier": "prettier -write ."
   },
   "repository": {
     "type": "git",

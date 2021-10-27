@@ -1,4 +1,3 @@
-// TODO: Figure out how to use global.css instead of this import:
 import '../styles/globals.css';
 import Layout from '../components/layouts/layout';
 

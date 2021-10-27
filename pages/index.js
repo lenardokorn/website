@@ -1,3 +1,7 @@
 export default function Home() {
-  return <p className="text-center font-bold text-blue-700">Hello World!</p>;
+  return (
+    <div className="flex flex-col h-screen justify-center items-center text-2xl">
+      <p>Hello World!</p>
+    </div>
+  );
 }
