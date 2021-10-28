@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import NavBar from '../NavBar';
 
 export default function Layout({ children, router }) {
   return (
@@ -7,7 +8,10 @@ export default function Layout({ children, router }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Lenard Okorn</title>
       </Head>
-      <main>{children}</main>
+
+      <NavBar path={router.asPath} />
+
+      <main className="container pt-3.5 mx-auto">{children}</main>
     </>
   );
 }

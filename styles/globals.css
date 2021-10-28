@@ -3,8 +3,17 @@
 @tailwind utilities;
 
 :root {
-  @apply text-gray-900;
-  @apply dark:text-gray-100;
+  @apply text-darkest;
+  @apply dark:text-lightest;
+}
+
+* {
+  @apply transition-colors;
+}
+
+body {
+  @apply bg-lightest;
+  @apply dark:bg-darkest;
 }
 
 h1 {
