@@ -3,40 +3,6 @@ import Link from 'next/link';
 import { MenuIcon } from '@heroicons/react/outline';
 import { useState } from 'react';
 
-const NavItem = ({ href, path, children }) => {
-  const isActive = path === href;
-
-  return (
-    <Link href={href}>
-      <a
-        className={
-          (isActive ? 'text-darker dark:text-lighter ' : ' ') +
-          'hover:text-darker dark:hover:text-lighter transition-colors'
-        }
-      >
-        {children}
-      </a>
-    </Link>
-  );
-};
-
-const DropdownList = ({ children }) => {
-  let isHidden = useState();
-
-  return (
-    <div
-      className={
-        (isHidden ? 'hidden ' : ' ') +
-        'origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-lightest dark:bg-darkest focus:outline-none'
-      }
-      aria-labelledby="menu-button"
-      tabIndex={-1}
-    >
-      <ul className="py-1">{children}</ul>
-    </div>
-  );
-};
-
 const DropdownItem = ({ href, children }) => {
   return (
     <Link href={href}>
@@ -85,12 +51,29 @@ const DropdownButton = () => {
   );
 };
 
+const NavItem = ({ href, path, children }) => {
+  const isActive = path === href;
+
+  return (
+    <Link href={href}>
+      <a
+        className={
+          (isActive ? 'text-darker dark:text-lighter' : ' ') +
+          'hover:bg-lighter dark:hover:bg-darker rounded-lg transition-colors p-1'
+        }
+      >
+        {children}
+      </a>
+    </Link>
+  );
+};
+
 const NavBar = (props) => {
   const { path } = props;
 
   return (
     <nav
-      className="fixed w-full bg-lightTransp dark:bg-darkTransp backdrop-blur-xl z-[1] border-b-[0.25px] border-lighter"
+      className="fixed w-full bg-lightTransp dark:bg-darkTransp backdrop-blur-xl z-[1] shadow-lg"
       {...props}
     >
       <div className="flex flex-wrap items-center justify-between p-2">
