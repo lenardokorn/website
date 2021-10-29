@@ -5,6 +5,7 @@
 :root {
   @apply text-darkest;
   @apply dark:text-lightest;
+  font-size: 20px;
 }
 
 * {
