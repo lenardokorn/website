@@ -1,4 +1,5 @@
 import Logo from './Logo';
+import DarkModeSwitch from './DarkModeSwitch';
 import Link from 'next/link';
 import { MenuIcon } from '@heroicons/react/outline';
 import { useState } from 'react';
@@ -24,7 +25,7 @@ const DropdownButton = () => {
   };
 
   return (
-    <div className="ml-auto inline-block sm:hidden relative">
+    <div className="ml-2 inline-block sm:hidden relative">
       <button
         className="flex items-center content-center p-3 border-[0.25px] border-lighter rounded-md hover:bg-lighter dark:hover:bg-darker"
         id="menu-button"
@@ -76,7 +77,7 @@ const NavBar = (props) => {
       className="fixed w-full bg-lightTransp dark:bg-darkTransp backdrop-blur-xl z-[1] shadow-lg"
       {...props}
     >
-      <div className="flex flex-wrap items-center justify-between p-2">
+      <div className="flex flex-wrap items-center p-2">
         <Logo />
         <ul className="hidden sm:flex flex-col sm:flex-row w-full sm:w-auto items-center flex-grow mt-4 sm:mt-0 space-x-0 sm:space-x-4">
           <NavItem href="/school" path={path}>
@@ -86,6 +87,7 @@ const NavBar = (props) => {
             Personal Projects
           </NavItem>
         </ul>
+        <DarkModeSwitch />
         <DropdownButton />
       </div>
     </nav>

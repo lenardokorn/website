@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 :root {
-  @apply text-darkest;
-  @apply dark:text-lightest;
   font-size: 20px;
 }
 
@@ -13,8 +11,8 @@
 }
 
 body {
-  @apply bg-lightest;
-  @apply dark:bg-darkest;
+  @apply text-darkest bg-lightest;
+  @apply dark:text-lightest dark:bg-darkest;
 }
 
 h1 {

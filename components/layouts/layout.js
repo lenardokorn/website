@@ -11,7 +11,7 @@ export default function Layout({ children, router }) {
 
       <NavBar path={router.asPath} />
 
-      <main className="container pt-3.5 mx-auto">{children}</main>
+      <main className="container pt-[5rem] mx-auto">{children}</main>
     </>
   );
 }
