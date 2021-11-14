@@ -40,11 +40,16 @@ const loadGLTFModel = (
   });
 };
 
-const Model = ({ modelPath }) => {
+const easeOutCirc = (x) => {
+  return Math.sqrt(1 - Math.pow(x - 1, 4));
+};
+
+const Model = ({ modelPath, w, h }) => {
   const refContainer = useRef();
   const [loading, setLoading] = useState(true);
   const [renderer, setRenderer] = useState();
   const scene = new THREE.Scene();
+  const target = new THREE.Vector3(-0.5, 1.2, 0);
   const initialCameraPosition = new THREE.Vector3(
     20 * Math.sin(0.2 * Math.PI),
     10,
@@ -73,7 +78,9 @@ const Model = ({ modelPath }) => {
         antialias: true,
         alpha: true,
       });
+      renderer.setPixelRatio(window.devicePixelRatio);
       renderer.setSize(containerWidth, containerHeight);
+      renderer.outputEncoding = THREE.sRGBEncoding;
       container.appendChild(renderer.domElement);
       setRenderer(renderer);
 
@@ -87,12 +94,14 @@ const Model = ({ modelPath }) => {
         50000
       );
       camera.position.copy(initialCameraPosition);
+      camera.lookAt(target);
 
       const ambientLight = new THREE.AmbientLight(0xcccccc, 1);
       scene.add(ambientLight);
 
       const controls = new OrbitControls(camera, renderer.domElement);
       controls.autoRotate = true;
+      controls.target = target;
 
       loadGLTFModel(scene, modelPath, {
         receiveShadow: false,
@@ -103,8 +112,26 @@ const Model = ({ modelPath }) => {
       });
 
       let req = null;
+      let frame = 0;
       const animate = () => {
         req = requestAnimationFrame(animate);
+
+        frame = frame <= 100 ? frame + 1 : frame;
+
+        if (frame <= 100) {
+          const pos = initialCameraPosition;
+          const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20;
+
+          camera.position.x =
+            pos.x * Math.cos(rotSpeed) + pos.z * Math.sin(rotSpeed);
+          camera.position.y = 10;
+          camera.position.z =
+            pos.z * Math.cos(rotSpeed) - pos.x * Math.sin(rotSpeed);
+          camera.lookAt(target);
+        } else {
+          controls.update();
+        }
+
         renderer.render(scene, camera);
       };
 
@@ -124,7 +151,11 @@ const Model = ({ modelPath }) => {
 
   return (
     <div
-      className="w-96 h-96 flex items-center justify-center"
+      className="flex items-center justify-center"
+      style={{
+        width: `${w ? w : 400}px`,
+        height: `${w ? w : 400}px`,
+      }}
       ref={refContainer}
     >
       {loading && <Spinner />}
