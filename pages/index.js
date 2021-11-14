@@ -1,11 +1,4 @@
-import dynamic from 'next/dynamic';
-
-const Model = dynamic(
-  () => {
-    return import('../components/Model');
-  },
-  { ssr: false }
-);
+import Model from '../components/Model';
 
 export default function Home() {
   return (
