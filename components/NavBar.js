@@ -59,7 +59,7 @@ const NavItem = ({ href, path, children }) => {
     <Link href={href}>
       <a
         className={
-          (isActive ? 'text-darker dark:text-lighter' : ' ') +
+          (isActive ?? 'bg-lighter dark:bg-darker ') +
           'hover:bg-lighter dark:hover:bg-darker rounded-lg transition-colors p-1'
         }
       >
