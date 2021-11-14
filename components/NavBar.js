@@ -28,7 +28,6 @@ const DropdownButton = () => {
     <div className="ml-2 inline-block sm:hidden relative">
       <button
         className="flex items-center content-center p-3 border-[0.25px] border-lighter rounded-md hover:bg-lighter dark:hover:bg-darker"
-        id="menu-button"
         onClick={onDropdown}
       >
         <MenuIcon className="h-5" />
