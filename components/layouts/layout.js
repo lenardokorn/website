@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import NavBar from '../NavBar';
+import NavBar from '../navbar';
 
 export default function Layout({ children, router }) {
   return (
