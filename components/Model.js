@@ -84,12 +84,13 @@ const Model = ({ modelPath, w, h }) => {
       container.appendChild(renderer.domElement);
       setRenderer(renderer);
 
-      const scale = containerHeight * 0.005 + 4.8;
+      const scaleX = containerWidth * 0.01;
+      const scaleY = containerHeight * 0.01;
       const camera = new THREE.OrthographicCamera(
-        -scale,
-        scale,
-        scale,
-        -scale,
+        -scaleX,
+        scaleX,
+        scaleY,
+        -scaleY,
         0.01,
         50000
       );
@@ -154,7 +155,7 @@ const Model = ({ modelPath, w, h }) => {
       className="flex items-center justify-center"
       style={{
         width: `${w ? w : 400}px`,
-        height: `${w ? w : 400}px`,
+        height: `${h ? h : 400}px`,
       }}
       ref={refContainer}
     >
