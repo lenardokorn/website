@@ -1,5 +1,5 @@
-import Logo from './Logo';
-import DarkModeSwitch from './DarkModeSwitch';
+import Logo from './logo';
+import DarkModeSwitch from './dark-mode-switch';
 import Link from 'next/link';
 import { MenuIcon } from '@heroicons/react/outline';
 import { useState } from 'react';

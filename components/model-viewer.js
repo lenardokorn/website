@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import Spinner from './Spinner';
+import Spinner from './spinner';
 
 const loadGLTFModel = (
   scene,
@@ -44,7 +44,7 @@ const easeOutCirc = (x) => {
   return Math.sqrt(1 - Math.pow(x - 1, 4));
 };
 
-const Model = ({ modelPath, w, h }) => {
+const ModelViewer = ({ modelPath, w, h }) => {
   const refContainer = useRef();
   const [loading, setLoading] = useState(true);
   const [renderer, setRenderer] = useState();
@@ -164,4 +164,4 @@ const Model = ({ modelPath, w, h }) => {
   );
 };
 
-export default Model;
+export default ModelViewer;
