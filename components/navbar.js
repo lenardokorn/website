@@ -59,7 +59,7 @@ const NavItem = ({ href, path, children }) => {
       <a
         className={
           (isActive ? 'bg-lighter dark:bg-darker ' : '') +
-          'hover:bg-lighter dark:hover:bg-darker rounded-lg transition-colors p-1'
+          'hover:bg-lighter dark:hover:bg-darker rounded-md transition-colors py-1 px-2'
         }
       >
         {children}
@@ -78,7 +78,7 @@ const NavBar = (props) => {
     >
       <div className="flex flex-wrap items-center p-2">
         <Logo />
-        <ul className="hidden sm:flex flex-col sm:flex-row w-full sm:w-auto items-center flex-grow mt-4 sm:mt-0 space-x-0 sm:space-x-4">
+        <ul className="hidden sm:flex flex-col sm:flex-row w-full sm:w-auto items-center flex-grow mt-4 sm:mt-0 space-x-0 sm:space-x-1">
           <NavItem href="/school" path={path}>
             School
           </NavItem>
