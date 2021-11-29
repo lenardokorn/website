@@ -53,3 +53,27 @@ pre {
 pre > code {
   @apply p-0;
 }
+
+dl,
+ol,
+ul {
+  @apply mt-0 mb-4;
+}
+
+ol,
+ul {
+  @apply pl-8;
+}
+
+ol {
+  @apply list-decimal;
+}
+
+ul {
+  @apply list-disc;
+}
+
+blockquote {
+  @apply text-gray-500 font-light;
+  @apply dark:text-gray-400;
+}

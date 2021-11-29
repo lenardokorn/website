@@ -40,12 +40,12 @@ const DropdownButton = () => {
         aria-labelledby="menu-button"
         tabIndex={-1}
       >
-        <ul className="py-1">
+        <div className="py-1">
           <DropdownItem href="/school">School</DropdownItem>
           <DropdownItem href="/personal-projects">
             Personal Projects
           </DropdownItem>
-        </ul>
+        </div>
       </div>
     </div>
   );
@@ -78,14 +78,14 @@ const NavBar = (props) => {
     >
       <div className="flex flex-wrap items-center p-2">
         <Logo />
-        <ul className="hidden sm:flex flex-col sm:flex-row w-full sm:w-auto items-center flex-grow mt-4 sm:mt-0 space-x-0 sm:space-x-1">
+        <div className="hidden sm:flex flex-col sm:flex-row w-full sm:w-auto items-center flex-grow mt-4 sm:mt-0 space-x-0 sm:space-x-1">
           <NavItem href="/school" path={path}>
             School
           </NavItem>
           <NavItem href="/personal-projects" path={path}>
             Personal Projects
           </NavItem>
-        </ul>
+        </div>
         <DarkModeSwitch />
         <DropdownButton />
       </div>
