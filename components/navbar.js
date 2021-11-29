@@ -1,7 +1,7 @@
 import Logo from './logo';
 import DarkModeSwitch from './dark-mode-switch';
 import Link from 'next/link';
-import { MenuIcon } from '@heroicons/react/outline';
+import { HiMenu } from 'react-icons/hi';
 import { useState } from 'react';
 
 const DropdownItem = ({ href, children }) => {
@@ -30,7 +30,7 @@ const DropdownButton = () => {
         className="flex items-center content-center p-3 border-[0.25px] border-lighter rounded-md hover:bg-lighter dark:hover:bg-darker"
         onClick={onDropdown}
       >
-        <MenuIcon className="h-5" />
+        <HiMenu className="w-5 h-5" />
       </button>
       <div
         className={

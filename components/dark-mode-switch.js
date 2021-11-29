@@ -1,5 +1,4 @@
 // TODO: Use icons
-import { MoonIcon, SunIcon } from '@heroicons/react/outline';
 import { useEffect, useRef } from 'react';
 
 export default function DarkModeSwitch() {
