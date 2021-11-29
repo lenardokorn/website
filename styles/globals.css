@@ -12,25 +12,44 @@ body {
 }
 
 h1 {
-  @apply text-6xl font-medium;
+  @apply text-4xl font-medium mt-0 mb-2;
 }
 
 h2 {
-  @apply text-5xl font-medium;
+  @apply text-3xl font-medium mt-0 mb-2;
 }
 
 h3 {
-  @apply text-4xl font-medium;
+  @apply text-2xl font-medium mt-0 mb-2;
 }
 
 h4 {
-  @apply text-3xl font-medium;
+  @apply text-xl font-medium mt-0 mb-2;
 }
 
 h5 {
-  @apply text-2xl font-medium;
+  @apply text-lg font-medium mt-0 mb-2;
 }
 
 h6 {
-  @apply text-xl font-medium;
+  @apply text-base font-medium mt-0 mb-2;
+}
+
+p,
+pre {
+  @apply mt-0 mb-4;
+}
+
+code {
+  @apply rounded-md font-mono bg-lighter text-darkest px-2 py-0.5;
+  @apply dark:bg-darker dark:text-lightest;
+}
+
+pre {
+  @apply rounded-md font-mono bg-lighter text-darkest p-3;
+  @apply dark:bg-darker dark:text-lightest;
+}
+
+pre > code {
+  @apply p-0;
 }
