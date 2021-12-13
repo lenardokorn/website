@@ -1,5 +1,5 @@
-// TODO: Use icons
 import { useEffect, useRef } from 'react';
+import { HiMoon, HiSun } from 'react-icons/hi';
 
 export default function DarkModeSwitch() {
   const ref = useRef();
