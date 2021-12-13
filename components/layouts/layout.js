@@ -38,7 +38,9 @@ export default function Layout({ children, router }) {
           ease: 'easeOut',
         }}
       >
-        <main className="container pt-[5rem] mx-auto">{children}</main>
+        <main className="w-full sm:w-[580px] md:w-[720px] lg:w-[980px] xl:w-[1200] pt-[5rem] mx-auto px-8 sm:px-4">
+          {children}
+        </main>
       </motion.div>
     </>
   );

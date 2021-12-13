@@ -44,17 +44,21 @@ const easeOutCirc = (x) => {
   return Math.sqrt(1 - Math.pow(x - 1, 4));
 };
 
-const ModelViewer = ({ modelPath, w, h }) => {
+const ModelViewer = ({ modelPath }) => {
   const refContainer = useRef();
   const [loading, setLoading] = useState(true);
   const [renderer, setRenderer] = useState();
-  const scene = new THREE.Scene();
-  const target = new THREE.Vector3(-0.5, 1.2, 0);
-  const initialCameraPosition = new THREE.Vector3(
-    20 * Math.sin(0.2 * Math.PI),
-    10,
-    20 * Math.cos(0.2 * Math.PI)
+  const [_camera, setCamera] = useState();
+  const [target] = useState(new THREE.Vector3(-0.5, 1.2, 0));
+  const [initialCameraPosition] = useState(
+    new THREE.Vector3(
+      20 * Math.sin(0.2 * Math.PI),
+      10,
+      20 * Math.cos(0.2 * Math.PI)
+    )
   );
+  const [scene] = useState(new THREE.Scene());
+  const [_controls, setControls] = useState();
 
   const handleWindowResize = useCallback(() => {
     const { current: container } = refContainer;
@@ -64,6 +68,20 @@ const ModelViewer = ({ modelPath, w, h }) => {
       const containerHeight = container.clientHeight;
 
       renderer.setSize(containerWidth, containerHeight);
+
+      const scaleX = containerWidth * 0.005 + 4.8;
+      const scaleY = containerHeight * 0.005 + 4.8;
+      const camera = new THREE.OrthographicCamera(
+        -scaleX,
+        scaleX,
+        scaleY,
+        -scaleY,
+        0.01,
+        50000
+      );
+      camera.position.copy(initialCameraPosition);
+      camera.lookAt(target);
+      setCamera(camera);
     }
   }, [renderer]);
 
@@ -84,8 +102,8 @@ const ModelViewer = ({ modelPath, w, h }) => {
       container.appendChild(renderer.domElement);
       setRenderer(renderer);
 
-      const scaleX = containerWidth * 0.01;
-      const scaleY = containerHeight * 0.01;
+      const scaleX = containerWidth * 0.005 + 4.8;
+      const scaleY = containerHeight * 0.005 + 4.8;
       const camera = new THREE.OrthographicCamera(
         -scaleX,
         scaleX,
@@ -96,6 +114,7 @@ const ModelViewer = ({ modelPath, w, h }) => {
       );
       camera.position.copy(initialCameraPosition);
       camera.lookAt(target);
+      setCamera(camera);
 
       const ambientLight = new THREE.AmbientLight(0xcccccc, 1);
       scene.add(ambientLight);
@@ -103,6 +122,7 @@ const ModelViewer = ({ modelPath, w, h }) => {
       const controls = new OrbitControls(camera, renderer.domElement);
       controls.autoRotate = true;
       controls.target = target;
+      setControls(controls);
 
       loadGLTFModel(scene, modelPath, {
         receiveShadow: false,
@@ -152,11 +172,7 @@ const ModelViewer = ({ modelPath, w, h }) => {
 
   return (
     <div
-      className="flex items-center justify-center"
-      style={{
-        width: `${w ? w : 400}px`,
-        height: `${h ? h : 400}px`,
-      }}
+      className="flex items-center justify-center w-full aspect-square"
       ref={refContainer}
     >
       {loading && <Spinner />}
