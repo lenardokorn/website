@@ -21,7 +21,7 @@ const LogoBox = () => {
 const Logo = () => {
   return (
     <Link href="/">
-      <a className="flex items-center">
+      <a className="flex items-center no-underline">
         <LogoBox />
       </a>
     </Link>

@@ -8,7 +8,7 @@ const DropdownItem = ({ href, children }) => {
   return (
     <Link href={href}>
       <a
-        className="block px-4 py-2 hover:bg-lighter dark:hover:bg-darker rounded-md transition-colors"
+        className="block px-4 py-2 hover:bg-lighter dark:hover:bg-darker rounded-md transition-colors no-underline font-normal"
         tabIndex={-1}
       >
         {children}
@@ -59,7 +59,7 @@ const NavItem = ({ href, path, children }) => {
       <a
         className={
           (isActive ? 'bg-lighter dark:bg-darker ' : '') +
-          'hover:bg-lighter dark:hover:bg-darker rounded-md transition-colors py-1 px-2'
+          'hover:bg-lighter dark:hover:bg-darker rounded-md transition-colors py-1 px-2 no-underline font-normal'
         }
       >
         {children}

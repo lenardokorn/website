@@ -35,6 +35,10 @@ h6 {
   @apply text-base font-medium mt-0 mb-2;
 }
 
+a {
+  @apply font-medium underline decoration-dotted hover:decoration-solid;
+}
+
 p,
 pre {
   @apply mt-0 mb-4;

@@ -18,7 +18,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <hr />
+      <hr className="my-6" />
     </>
   );
 }
