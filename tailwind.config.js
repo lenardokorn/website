@@ -39,8 +39,8 @@ module.exports = {
       colors: {
         lightest: colors.gray[100],
         lighter: colors.gray[300],
-        lightTransp: colors.gray[100] + '50',
-        darkTransp: '#0F111A80',
+        lightTransp: colors.gray[100] + '75',
+        darkTransp: '#0F111ABF',
         darker: '#181A28',
         darkest: '#0F111A',
       },
