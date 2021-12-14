@@ -1,13 +1,24 @@
 import Head from 'next/head';
 import NavBar from '../navbar';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 export default function Layout({ children, router }) {
+  const [isDark, setIsDark] = useState(false);
+  useEffect(() => {
+    setIsDark(window.matchMedia('(prefers-color-scheme: dark)').matches);
+  }, []);
+
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Lenard Okorn</title>
+        <link
+          rel="shortcut icon"
+          href={isDark ? '/svg/logo-white.svg' : '/svg/logo.svg'}
+          type="image/x-icon"
+        />
       </Head>
 
       <NavBar path={router.asPath} />
