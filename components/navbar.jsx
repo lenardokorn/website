@@ -73,7 +73,7 @@ const NavBar = (props) => {
 
   return (
     <nav
-      className="fixed w-full bg-lightTransp dark:bg-darkTransp backdrop-blur-xl z-[1] shadow-lg"
+      className="fixed w-full bg-lightTransp dark:bg-darkTransp backdrop-blur-xl z-[1] shadow-lg dark:shadow-darker"
       {...props}
     >
       <div className="flex flex-wrap items-center p-2">
