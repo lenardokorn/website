@@ -40,3 +40,5 @@ This is `inline code`.
 3. Item 3
 
 > This is a quote.
+
+![Image alt text](/images/SuitImage.jpg 'Image title')
