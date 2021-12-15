@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+#score-wrapper {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 5.5rem;
+    font-size: 125%;
+    font-weight: 500;
+}
+
+#player1 {
+    width: 50%;
+    float: left;
+}
+
+#player2 {
+    width: 50%;
+    float: right;
+    text-align: right;
+}
+
+.light {
+    font-weight: 300;
+    color: #212529;
+}
+
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.memory-card {
+    background-color: #e6e6e6;
+    border: 3px solid #a0a0a0;
+    color: #212529;
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.memory-card > i {
+    font-size: 4rem;
+}
+
+.back {
+    background-color: #212529;
+    color: rgba(0, 0, 0, 0);
+    transition: background-color 0.25s ease-in-out;
+}
+
+.back:hover {
+    background-color: #373d44;
+}
+
+#win-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    flex-direction: column;
+}
+
+#win-message button {
+    font-size: 1.5rem;
+}
+
+#win-message.show {
+    display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Mobile */
+    #score-wrapper {
+        padding: 0;
+    }
+
+    .memory-card {
+        width: 6rem;
+        height: 6rem;
+        margin: 0.5rem;
+        font-size: 1rem;
+        border: 2px solid #a0a0a0;
+    }
+
+    .memory-card > i {
+        font-size: 3rem;
+    }
+}
