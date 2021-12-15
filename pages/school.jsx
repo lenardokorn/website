@@ -1,28 +1,25 @@
-import Image from 'next/image';
+import Link from 'next/link';
+import { school2ndGrade } from '../lib/school-2nd-grade';
 
 export default function School() {
   return (
     <>
       <h1>School</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut dolores
-        saepe fuga magni ratione autem officiis id, quas earum, enim ut! Maiores
-        delectus quisquam error eum, mollitia qui, magni necessitatibus dicta
-        omnis impedit temporibus, explicabo quaerat veritatis ab ipsum
-        cupiditate sed maxime perspiciatis illo quia tempore dolorum dolor?
-        Officiis, rem!
-      </p>
-      <Image
-        src="/images/SuitImage.jpg"
-        alt="suit image"
-        width={500}
-        height={500}
-        className="rounded-lg"
-      />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
-        voluptatum.
-      </p>
+      <ul>
+        {school2ndGrade.map(({ title, icon, description, href }) => (
+          <li key={href}>
+            <Link href={'/school/2nd-grade/' + href}>
+              <a>
+                <>
+                  <span className="inline-block">{icon}</span>
+                  {title}
+                </>
+              </a>
+            </Link>
+            <p>{description}</p>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }
