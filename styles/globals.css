@@ -50,7 +50,7 @@ code {
 }
 
 pre {
-  @apply rounded-md font-mono bg-lighter text-darkest p-3;
+  @apply rounded-md font-mono bg-lighter text-darkest p-3 whitespace-pre-wrap;
   @apply dark:bg-darker dark:text-lightest;
 }
 
