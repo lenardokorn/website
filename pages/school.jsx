@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { school2ndGrade } from '../lib/school-2nd-grade';
 import { FiAlertTriangle } from 'react-icons/fi';
 import { useRouter } from 'next/router';
@@ -27,7 +26,7 @@ export default function School() {
       </p>
 
       <div
-        className="bg-orange-300 text-red-700 px-4 py-3 shadow-md rounded-md flex my-5"
+        className="bg-orange-300 text-red-700 px-4 py-3 shadow-md rounded-md flex my-5 flex-col sm:flex-row"
         role="alert"
       >
         <FiAlertTriangle className="py-1 w-14 h-14 mr-4 self-center" />
