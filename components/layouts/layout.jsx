@@ -21,7 +21,7 @@ export default function Layout({ children, router }) {
         />
       </Head>
 
-      <NavBar path={router.asPath} />
+      <NavBar />
 
       <motion.div
         key={router.route}

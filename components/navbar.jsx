@@ -3,6 +3,7 @@ import DarkModeSwitch from './dark-mode-switch';
 import Link from 'next/link';
 import { HiMenu } from 'react-icons/hi';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 const DropdownItem = ({ href, children }) => {
   return (
@@ -51,8 +52,9 @@ const DropdownButton = () => {
   );
 };
 
-const NavItem = ({ href, path, children }) => {
-  const isActive = path === href;
+const NavItem = ({ href, children }) => {
+  const router = useRouter();
+  const isActive = router.asPath === href;
 
   return (
     <Link href={href}>
