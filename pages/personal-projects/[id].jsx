@@ -8,9 +8,6 @@ export default function Post({ postData }) {
       <section>
         <div className="flex">
           <LinkButton href="/personal-projects">← Back</LinkButton>
-          {/* <Link href="/personal-projects">
-            <a>← Back</a>
-          </Link> */}
           {postData.git !== undefined && (
             <div className="ml-auto">
               <LinkButton href={`https://github.com/${postData.git}`}>
