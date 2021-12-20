@@ -1,5 +1,6 @@
 import { getAllPostsIds, getPostData } from '../../lib/posts';
 import { BsGithub } from 'react-icons/bs';
+import { HiOutlineCalendar, HiArrowSmLeft } from 'react-icons/hi';
 import LinkButton from '../../components/link-button';
 
 export default function Post({ postData }) {
@@ -7,7 +8,9 @@ export default function Post({ postData }) {
     <>
       <section>
         <div className="flex">
-          <LinkButton href="/personal-projects">← Back</LinkButton>
+          <LinkButton href="/personal-projects">
+            <HiArrowSmLeft className="inline-block" /> Back
+          </LinkButton>
           {postData.git !== undefined && (
             <div className="ml-auto">
               <LinkButton href={`https://github.com/${postData.git}`}>
@@ -18,7 +21,7 @@ export default function Post({ postData }) {
         </div>
         <h1 className="mt-3 mb-1">{postData.title}</h1>
         <span className="bg-lighter dark:bg-darker py-1 px-3 rounded-full">
-          {postData.date}
+          <HiOutlineCalendar className="inline-block" /> {postData.date}
         </span>
       </section>
 
