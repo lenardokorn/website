@@ -50,7 +50,7 @@ export default function School() {
             }}
           >
             <span className="mx-auto">{icon}</span>
-            <h5>{title}</h5>
+            <h5 className="text-center">{title}</h5>
             <p className="font-light">{description}</p>
           </div>
         ))}
