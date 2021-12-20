@@ -2,12 +2,14 @@ import Head from 'next/head';
 import NavBar from '../navbar';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
-export default function Layout({ children, router }) {
+export default function Layout({ children }) {
   const [isDark, setIsDark] = useState(false);
   useEffect(() => {
     setIsDark(window.matchMedia('(prefers-color-scheme: dark)').matches);
   }, []);
+  const router = useRouter();
 
   return (
     <>
