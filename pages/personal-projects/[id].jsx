@@ -30,7 +30,10 @@ export default function Post({ postData }) {
 
       <hr />
 
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <div
+        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        className="markdown"
+      />
     </>
   );
 }
