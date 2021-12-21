@@ -13,7 +13,10 @@ export default function Post({ postData }) {
           </LinkButton>
           {postData.git !== undefined && (
             <div className="ml-auto">
-              <LinkButton href={`https://github.com/${postData.git}`}>
+              <LinkButton
+                href={`https://github.com/${postData.git}`}
+                newTab={true}
+              >
                 <BsGithub className="inline-block" /> View on GitHub
               </LinkButton>
             </div>
