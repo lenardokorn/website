@@ -42,7 +42,7 @@ export default function School() {
       <div className="flex flex-wrap justify-center my-5">
         {school2ndGrade.map(({ title, icon, description, href }) => (
           <div
-            className="rounded-md p-3 m-2 ring-1 ring-gray-400 dark:ring-gray-700 hover:bg-lighter dark:hover:bg-darker transition-colors hover:shadow-md shadow-sm flex-grow-0 flex-shrink basis-48 cursor-pointer select-none flex flex-col"
+            className="rounded-md p-3 m-2 ring-1 ring-gray-400 dark:ring-gray-700 hover:bg-lighter dark:hover:bg-darker hover:shadow-md shadow-sm flex-grow-0 flex-shrink basis-48 cursor-pointer select-none flex flex-col"
             key={href}
             onClick={(e) => {
               e.preventDefault();

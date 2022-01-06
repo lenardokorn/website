@@ -9,7 +9,7 @@ const DropdownItem = ({ href, children }) => {
   return (
     <Link href={href}>
       <a
-        className="block px-4 py-2 hover:bg-lighter dark:hover:bg-darker rounded-md transition-colors no-underline font-normal"
+        className="block px-4 py-2 hover:bg-lighter dark:hover:bg-darker rounded-md no-underline font-normal"
         tabIndex={-1}
       >
         {children}
@@ -28,7 +28,7 @@ const DropdownButton = () => {
   return (
     <div className="ml-2 inline-block sm:hidden relative">
       <button
-        className="flex items-center content-center p-3 border-[0.25px] border-gray-400 dark:border-gray-700 rounded-md hover:bg-lighter dark:hover:bg-darker transition-colors"
+        className="flex items-center content-center p-3 border-[0.25px] border-gray-400 dark:border-gray-700 rounded-md hover:bg-lighter dark:hover:bg-darker"
         onClick={onDropdown}
       >
         <HiMenu className="w-5 h-5" />
@@ -61,7 +61,7 @@ const NavItem = ({ href, children }) => {
       <a
         className={
           (isActive ? 'bg-lighter dark:bg-darker ' : '') +
-          'hover:bg-lighter dark:hover:bg-darker rounded-md transition-colors py-1 px-2 no-underline font-normal'
+          'hover:bg-lighter dark:hover:bg-darker rounded-md py-1 px-2 no-underline font-normal'
         }
       >
         {children}

@@ -31,7 +31,7 @@ export default function PersonalProjects({ allPostsData }) {
       <div className="flex flex-wrap justify-center my-5">
         {allPostsData.map(({ id, date, title, git, category }) => (
           <div
-            className="rounded-md p-3 m-2 group ring-1 ring-gray-400 dark:ring-gray-700 hover:bg-lighter dark:hover:bg-darker transition-colors hover:shadow-md shadow-sm flex-grow-0 flex-shrink basis-48 cursor-pointer select-none flex flex-col relative"
+            className="rounded-md p-3 m-2 group ring-1 ring-gray-400 dark:ring-gray-700 hover:bg-lighter dark:hover:bg-darker hover:shadow-md shadow-sm flex-grow-0 flex-shrink basis-48 cursor-pointer select-none flex flex-col relative"
             key={'/personal-projects/' + id}
             onClick={(e) => {
               e.preventDefault();

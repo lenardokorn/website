@@ -6,8 +6,12 @@
   font-size: 18px;
 }
 
+* {
+  @apply transition-colors;
+}
+
 body {
-  @apply text-darkest bg-lightest transition-colors;
+  @apply text-darkest bg-lightest;
   @apply dark:text-lightest dark:bg-darkest;
 }
 
