@@ -22,7 +22,7 @@ export default function Accordion({ entries }) {
                 id={title.replace(/\s/g, '') + index}
                 className="hidden peer"
               />
-              <span className="font-medium text-xl mb-3 peer-checked:mb-0">
+              <span className="font-medium text-lg mb-3 peer-checked:mb-0">
                 {title}
               </span>
               <HiChevronDown className="text-2xl ml-auto peer-checked:rotate-180 transition-transform mb-3 peer-checked:mb-0" />
