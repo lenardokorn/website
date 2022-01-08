@@ -19,7 +19,7 @@ export default function Home() {
 
       <hr />
 
-      <h2>About me</h2>
+      <h2 id="about">About</h2>
       <h3>Who am I?</h3>
       <ul>
         <li>

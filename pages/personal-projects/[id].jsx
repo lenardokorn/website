@@ -17,7 +17,7 @@ export default function Post({ postData }) {
                 href={`https://github.com/${postData.git}`}
                 newTab={true}
               >
-                <BsGithub className="inline-block" /> View on GitHub
+                <BsGithub className="inline-block" /> View on Github
               </LinkButton>
             </div>
           )}
