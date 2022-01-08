@@ -51,7 +51,7 @@ export default function Footer() {
             <span className="w-fit mx-2 group">
               <span className="group-hover:font-bold">No one</span> is illegal.
             </span>
-            <span className="w-fit mx-2 hover:text-lightest hover:bg-black rounded-md hover:px-2 dark:hover:px-0">
+            <span className="w-fit mx-2 hover:text-lightest hover:bg-black rounded-md hover:px-2">
               Black Lives Matter.
             </span>
             <span className="w-fit mx-2 rainbow">Love is love.</span>
