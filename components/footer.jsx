@@ -48,14 +48,14 @@ export default function Footer() {
           <hr className="my-2" />
 
           <div className="flex flex-wrap items-center justify-center">
-            <span className="w-fit mx-2 group">
+            <span className="mx-2 group">
               <span className="group-hover:font-bold">No one</span> is illegal.
             </span>
-            <span className="w-fit mx-2 hover:text-lightest hover:bg-black rounded-md hover:px-2">
+            <span className="mx-2 hover:text-lightest hover:bg-black rounded-md hover:px-2">
               Black Lives Matter.
             </span>
-            <span className="w-fit mx-2 rainbow">Love is love.</span>
-            <span className="w-fit mx-2 trans-rights dark:hover:text-transparent dark:hover:bg-clip-text rounded-md hover:px-2 dark:hover:px-0">
+            <span className="mx-2 rainbow">Love is love.</span>
+            <span className="mx-2 trans-rights dark:hover:text-transparent dark:hover:bg-clip-text rounded-md hover:px-2 dark:hover:px-0">
               Trans rights are human rights.
             </span>
           </div>
