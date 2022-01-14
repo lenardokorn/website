@@ -1,6 +1,6 @@
 import { getAllPostsIds, getPostData } from '../../lib/posts';
 import { BsGithub } from 'react-icons/bs';
-import { HiOutlineCalendar, HiArrowSmLeft } from 'react-icons/hi';
+import { HiOutlineCalendar, HiOutlineTag, HiArrowSmLeft } from 'react-icons/hi';
 import LinkButton from '../../components/link-button';
 
 export default function Post({ postData }) {
@@ -23,9 +23,17 @@ export default function Post({ postData }) {
           )}
         </div>
         <h1 className="mt-3 mb-1">{postData.title}</h1>
-        <span className="bg-lighter dark:bg-darker py-1 px-3 rounded-full">
-          <HiOutlineCalendar className="inline-block" /> {postData.date}
-        </span>
+        <div className="space-x-2">
+          <span className="bg-lighter dark:bg-darker py-1 px-3 rounded-full">
+            <HiOutlineCalendar className="inline-block" /> {postData.date}
+          </span>
+          <span className="bg-lighter dark:bg-darker py-1 px-3 rounded-full">
+            <HiOutlineTag className="inline-block" />{' '}
+            {postData.category === undefined
+              ? 'Miscellaneous'
+              : postData.category}
+          </span>
+        </div>
       </section>
 
       <hr />
