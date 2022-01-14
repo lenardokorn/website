@@ -173,3 +173,5 @@ sketch
 .ionide
 
 .vercel
+
+.env.local

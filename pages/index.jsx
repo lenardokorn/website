@@ -12,7 +12,7 @@ export default function Home() {
         </div>
         <div className="flex-shrink-0 self-center">
           <div className="max-w-full w-[300px] lg:w-[450px]">
-            <ModelViewer modelPath="/dog.glb" />
+            <ModelViewer modelPath="/lenny.glb" />
           </div>
         </div>
       </div>

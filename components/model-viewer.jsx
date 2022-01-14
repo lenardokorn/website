@@ -69,8 +69,8 @@ const ModelViewer = ({ modelPath }) => {
 
       renderer.setSize(containerWidth, containerHeight);
 
-      const scaleX = containerWidth * 0.0005 + 4.8;
-      const scaleY = containerHeight * 0.0005 + 4.8;
+      const scaleX = containerWidth * 0.000025 + 4.8;
+      const scaleY = containerHeight * 0.000025 + 4.8;
       const camera = new THREE.OrthographicCamera(
         -scaleX,
         scaleX,
@@ -102,8 +102,8 @@ const ModelViewer = ({ modelPath }) => {
       container.appendChild(renderer.domElement);
       setRenderer(renderer);
 
-      const scaleX = containerWidth * 0.0005 + 4.8;
-      const scaleY = containerHeight * 0.0005 + 4.8;
+      const scaleX = containerWidth * 0.000025 + 4.8;
+      const scaleY = containerHeight * 0.000025 + 4.8;
       const camera = new THREE.OrthographicCamera(
         -scaleX,
         scaleX,
