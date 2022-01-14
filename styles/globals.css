@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-size: 18px;
+}
+
+* {
+  @apply transition-colors;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply text-darkest bg-lightest;
+  @apply dark:text-lightest dark:bg-darkest;
+}
+
+h1 {
+  @apply text-4xl font-medium mt-0 mb-2;
+}
+
+h2 {
+  @apply text-3xl font-medium mt-0 mb-2;
+}
+
+h3 {
+  @apply text-2xl font-medium mt-0 mb-2;
+}
+
+h4 {
+  @apply text-xl font-medium mt-0 mb-2;
+}
+
+h5 {
+  @apply text-lg font-medium mt-0 mb-2;
+}
+
+h6 {
+  @apply text-base font-medium mt-0 mb-2;
+}
+
+a {
+  @apply font-medium underline decoration-dotted hover:decoration-solid;
+}
+
+p,
+pre {
+  @apply mt-0 mb-4;
+}
+
+code {
+  @apply rounded-md font-mono bg-lighter text-darkest px-2 py-0.5;
+  @apply dark:bg-darker dark:text-lightest;
+}
+
+pre {
+  @apply rounded-md font-mono bg-lighter text-darkest p-3 whitespace-pre-wrap;
+  @apply dark:bg-darker dark:text-lightest;
+}
+
+pre > code {
+  @apply p-0 break-all;
+}
+
+dl,
+ol,
+ul {
+  @apply mt-0 mb-4;
+}
+
+ol,
+ul {
+  @apply pl-8;
+}
+
+ol {
+  @apply list-decimal;
+}
+
+ul {
+  @apply list-disc;
+}
+
+blockquote {
+  @apply text-gray-500 font-light;
+  @apply dark:text-gray-400;
+}
+
+hr {
+  @apply w-1/3 my-5 mx-auto text-gray-400 dark:text-gray-700;
+}
+
+img {
+  @apply max-w-full h-auto;
+}
+
+.markdown img {
+  @apply mx-auto;
+}
