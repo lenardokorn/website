@@ -24,7 +24,7 @@ export default function Home() {
       <ul>
         <li>
           a student at{' '}
-          <Link href="https://htl-kaindorf.at">
+          <Link href="https://www.htl-kaindorf.at">
             <a target="_blank">HTBLA Kaindorf</a>
           </Link>
         </li>
