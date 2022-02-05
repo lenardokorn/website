@@ -1,87 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inline-block</title>
-    <link rel="stylesheet" href="../../../../css/home-exercises/css-properties-total/css-properties-total-layout.css">
+    <link
+      rel="stylesheet"
+      href="../../../../css/home-exercises/css-properties-total/css-properties-total-layout.css"
+    />
     <style>
-        .inline {
-            display: inline;
-            width: 100px;
-            height: 100px;
-            padding: 5px;
-            border: 3px solid tomato;
-            background-color: #f4a261;
-        }
+      .inline {
+        display: inline;
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        border: 3px solid tomato;
+        background-color: #f4a261;
+      }
 
-        .inline-block {
-            display: inline-block;
-            width: 100px;
-            height: 100px;
-            padding: 5px;
-            border: 3px solid tomato;
-            background-color: #f4a261;
-        }
+      .inline-block {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        border: 3px solid tomato;
+        background-color: #f4a261;
+      }
 
-        .block {
-            display: block;
-            width: 100px;
-            height: 100px;
-            padding: 5px;
-            border: 3px solid tomato;
-            background-color: #f4a261;
-        }
+      .block {
+        display: block;
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        border: 3px solid tomato;
+        background-color: #f4a261;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h2>Inline-block</h2>
 
     <h3>Erklärung</h3>
     <p>
-        Im Gegensatz zu <code>display-inline</code>, kann man bei <code>display: inline-block</code> die Breite und Höhe
-        ändern. Zudem kann man für oben und unten margins und paddings einstellen, was bei ersterem nicht möglich ist.
-        <br>
-        Im Vergleich zu <code>display: block</code>, wird bei <code>display: inline-block</code> kein Zeilenumbruch nach
-        dem Element eingefügt.
+      Im Gegensatz zu <code>display-inline</code>, kann man bei
+      <code>display: inline-block</code> die Breite und Höhe ändern. Zudem kann
+      man für oben und unten margins und paddings einstellen, was bei ersterem
+      nicht möglich ist.
+      <br />
+      Im Vergleich zu <code>display: block</code>, wird bei
+      <code>display: inline-block</code> kein Zeilenumbruch nach dem Element
+      eingefügt.
     </p>
 
     <h3>Beispiel</h3>
     <p>
-        Es folgen drei Absätze, in denen sich zwei span-Elemente befinden, welche alle wie folgt formatiert sind:
+      Es folgen drei Absätze, in denen sich zwei span-Elemente befinden, welche
+      alle wie folgt formatiert sind:
     </p>
     <div class="code-block">
-        <p>
-            width: 100px;<br>
-            height: 100px;<br>
-            padding: 5px;<br>
-            border: 3px solid tomato;<br>
-            background-color: #f4a261;
-        </p>
+      <p>
+        width: 100px;<br />
+        height: 100px;<br />
+        padding: 5px;<br />
+        border: 3px solid tomato;<br />
+        background-color: #f4a261;
+      </p>
     </div>
     <h4>display: inline</h4>
     <p>
-        Duis aliquip eiusmod ea exercitation est nulla ut ut. Eu magna incididunt pariatur pariatur ipsum aliquip irure
-        labore reprehenderit <span class="inline">consequat</span> <span class="inline">Lorem</span> ad elit. Excepteur
-        consequat elit nulla exercitation culpa fugiat culpa adipisicing reprehenderit cupidatat ipsum nulla ullamco
-        qui.
+      Duis aliquip eiusmod ea exercitation est nulla ut ut. Eu magna incididunt
+      pariatur pariatur ipsum aliquip irure labore reprehenderit
+      <span class="inline">consequat</span> <span class="inline">Lorem</span> ad
+      elit. Excepteur consequat elit nulla exercitation culpa fugiat culpa
+      adipisicing reprehenderit cupidatat ipsum nulla ullamco qui.
     </p>
     <h4>display: inline-block</h4>
     <p>
-        Duis aliquip eiusmod ea exercitation est nulla ut ut. Eu magna incididunt pariatur pariatur ipsum aliquip irure
-        labore reprehenderit <span class="inline-block">consequat</span> <span class="inline-block">Lorem</span> ad
-        elit. Excepteur consequat elit nulla exercitation culpa fugiat culpa adipisicing reprehenderit cupidatat ipsum
-        nulla ullamco qui.
+      Duis aliquip eiusmod ea exercitation est nulla ut ut. Eu magna incididunt
+      pariatur pariatur ipsum aliquip irure labore reprehenderit
+      <span class="inline-block">consequat</span>
+      <span class="inline-block">Lorem</span> ad elit. Excepteur consequat elit
+      nulla exercitation culpa fugiat culpa adipisicing reprehenderit cupidatat
+      ipsum nulla ullamco qui.
     </p>
     <h4>display: block-</h4>
     <p>
-        Duis aliquip eiusmod ea exercitation est nulla ut ut. Eu magna incididunt pariatur pariatur ipsum aliquip irure
-        labore reprehenderit <span class="block">consequat</span> <span class="block">Lorem</span> ad elit. Excepteur
-        consequat elit nulla exercitation culpa fugiat culpa adipisicing reprehenderit cupidatat ipsum nulla ullamco
-        qui.
+      Duis aliquip eiusmod ea exercitation est nulla ut ut. Eu magna incididunt
+      pariatur pariatur ipsum aliquip irure labore reprehenderit
+      <span class="block">consequat</span> <span class="block">Lorem</span> ad
+      elit. Excepteur consequat elit nulla exercitation culpa fugiat culpa
+      adipisicing reprehenderit cupidatat ipsum nulla ullamco qui.
     </p>
-</body>
-
+  </body>
 </html>

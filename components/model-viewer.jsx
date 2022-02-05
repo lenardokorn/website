@@ -172,7 +172,7 @@ const ModelViewer = ({ modelPath }) => {
 
   return (
     <div
-      className="flex items-center justify-center w-full aspect-square"
+      className="flex aspect-square w-full items-center justify-center"
       ref={refContainer}
     >
       {loading && <Spinner />}

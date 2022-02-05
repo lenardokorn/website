@@ -7,7 +7,7 @@ const FooterLink = ({ href, children, blank }) => {
     <Link href={href}>
       <a
         target={blank ? '_blank' : ''}
-        className="mx-2 no-underline font-normal text-darkest hover:text-darker dark:text-lightest dark:hover:text-lighter"
+        className="mx-2 font-normal text-darkest no-underline hover:text-darker dark:text-lightest dark:hover:text-lighter"
       >
         {children}
       </a>
@@ -17,9 +17,9 @@ const FooterLink = ({ href, children, blank }) => {
 
 export default function Footer() {
   return (
-    <div className="w-full mt-auto">
-      <div className="mt-10 py-6 flex flex-col items-center bg-lightTransp dark:bg-darkTransp backdrop-blur-md z-[1] shadow-top-lg dark:shadow-darker transition-shadow">
-        <div className="w-full sm:w-[580px] md:w-[720px] lg:w-[980px] xl:w-[1200] px-8 sm:px-4 flex flex-col items-center">
+    <div className="mt-auto w-full">
+      <div className="z-[1] mt-10 flex flex-col items-center bg-lightTransp py-6 shadow-top-lg backdrop-blur-md transition-shadow dark:bg-darkTransp dark:shadow-darker">
+        <div className="flex w-full flex-col items-center px-8 sm:w-[580px] sm:px-4 md:w-[720px] lg:w-[980px] xl:w-[1200]">
           <div className="flex flex-wrap items-center justify-center">
             <FooterLink href="/">Home</FooterLink>
             <FooterLink href="/#about">About</FooterLink>
@@ -41,21 +41,21 @@ export default function Footer() {
 
           <div className="group">
             © built with{' '}
-            <HiHeart className="inline-block group-hover:text-red-600 group-hover:animate-ping group-hover:scale-125 transition-transform" />{' '}
+            <HiHeart className="inline-block transition-transform group-hover:scale-125 group-hover:animate-ping group-hover:text-red-600" />{' '}
             by Lenard Okorn
           </div>
 
           <hr className="my-2" />
 
           <div className="flex flex-wrap items-center justify-center">
-            <span className="mx-2 group">
+            <span className="group mx-2">
               <span className="group-hover:font-bold">No one</span> is illegal.
             </span>
-            <span className="mx-2 hover:text-lightest hover:bg-black rounded-md hover:px-2">
+            <span className="mx-2 rounded-md hover:bg-black hover:px-2 hover:text-lightest">
               Black Lives Matter.
             </span>
-            <span className="mx-2 rainbow">Love is love.</span>
-            <span className="mx-2 trans-rights dark:hover:text-transparent dark:hover:bg-clip-text rounded-md hover:px-2 dark:hover:px-0">
+            <span className="rainbow mx-2">Love is love.</span>
+            <span className="trans-rights mx-2 rounded-md hover:px-2 dark:hover:bg-clip-text dark:hover:px-0 dark:hover:text-transparent">
               Trans rights are human rights.
             </span>
           </div>

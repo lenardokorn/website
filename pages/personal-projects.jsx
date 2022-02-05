@@ -28,10 +28,10 @@ export default function PersonalProjects({ allPostsData }) {
 
       <hr />
 
-      <div className="flex flex-wrap justify-center my-5">
+      <div className="my-5 flex flex-wrap justify-center">
         {allPostsData.map(({ id, date, title, git, category }) => (
           <div
-            className="rounded-md p-3 m-2 group ring-1 ring-gray-400 dark:ring-gray-700 hover:bg-lighter dark:hover:bg-darker hover:shadow-md shadow-sm flex-grow-0 flex-shrink basis-48 cursor-pointer select-none flex flex-col relative"
+            className="group relative m-2 flex flex-shrink flex-grow-0 basis-48 cursor-pointer select-none flex-col rounded-md p-3 shadow-sm ring-1 ring-gray-400 hover:bg-lighter hover:shadow-md dark:ring-gray-700 dark:hover:bg-darker"
             key={'/personal-projects/' + id}
             onClick={(e) => {
               e.preventDefault();
@@ -39,15 +39,15 @@ export default function PersonalProjects({ allPostsData }) {
             }}
           >
             <h5 className="text-center">{title}</h5>
-            <div className="bg-lighter dark:bg-darker group-hover:bg-lightest dark:group-hover:bg-darkest py-1 px-3 my-1 rounded-full mr-auto">
+            <div className="my-1 mr-auto rounded-full bg-lighter py-1 px-3 group-hover:bg-lightest dark:bg-darker dark:group-hover:bg-darkest">
               <HiOutlineCalendar className="inline-block" /> {date}
             </div>
-            <div className="bg-lighter dark:bg-darker group-hover:bg-lightest dark:group-hover:bg-darkest py-1 px-3 my-1 rounded-full mr-auto">
+            <div className="my-1 mr-auto rounded-full bg-lighter py-1 px-3 group-hover:bg-lightest dark:bg-darker dark:group-hover:bg-darkest">
               <HiOutlineTag className="inline-block" />{' '}
               {category === undefined ? 'Miscellaneous' : category}
             </div>
             {git !== undefined && (
-              <BsGithub className="absolute opacity-50 right-3" />
+              <BsGithub className="absolute right-3 opacity-50" />
             )}
           </div>
         ))}

@@ -1,210 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Three Euler Problems</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/6adbb9e6d1.js" crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/6adbb9e6d1.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900');
+      @import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900');
 
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 2rem;
+      body {
+        font-family: 'Inter', sans-serif;
+        margin: 2rem;
+      }
+
+      .hcenter {
+        display: flex;
+      }
+
+      .vcenter {
+        display: flex;
+        align-items: center;
+      }
+
+      #number {
+        width: 7.5rem;
+        height: 7.5rem;
+        background: linear-gradient(to bottom left, #ff9b3d, #ff124d);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: 700;
+        color: white;
+        border-radius: 50%;
+        animation-name: rollInLeft;
+        animation-duration: 2s;
+        animation-fill-mode: both;
+        animation-timing-function: ease-in-out;
+      }
+
+      @keyframes rollInLeft {
+        from {
+          transform: translate3d(-40vw, 0, 0) rotate(-100deg);
+          opacity: 0;
         }
 
-        .hcenter {
-            display: flex;
+        to {
+          transform: translate3d(0, 0, 0) rotate(0deg);
+          opacity: 1;
         }
-
-        .vcenter {
-            display: flex;
-            align-items: center;
-        }
-
-        #number {
-            width: 7.5rem;
-            height: 7.5rem;
-            background: linear-gradient(to bottom left, #ff9b3d, #ff124d);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-weight: 700;
-            color: white;
-            border-radius: 50%;
-            animation-name: rollInLeft;
-            animation-duration: 2s;
-            animation-fill-mode: both;
-            animation-timing-function: ease-in-out;
-        }
-
-        @keyframes rollInLeft {
-            from {
-                transform: translate3d(-40vw, 0, 0) rotate(-100deg);
-                opacity: 0;
-            }
-
-            to {
-                transform: translate3d(0, 0, 0) rotate(0deg);
-                opacity: 1;
-            }
-        }
+      }
     </style>
     <script>
-        function countingSundays() {
-            alert('How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?');
+      function countingSundays() {
+        alert(
+          'How many Sundays fell on the first of the month during the twentieth century (1 Jan 1901 to 31 Dec 2000)?'
+        );
 
-            let sundayCnt = 0;
+        let sundayCnt = 0;
 
-            // Iterate through every first day of each month from 1901 to 2000 and check if it is a sunday
-            for (let year = 1901; year <= 2000; year++) {
-                for (let month = 0; month < 12; month++) {
-                    if (new Date(year, month, 1).getDay() === 0) {
-                        sundayCnt++;
-                    }
-                }
+        // Iterate through every first day of each month from 1901 to 2000 and check if it is a sunday
+        for (let year = 1901; year <= 2000; year++) {
+          for (let month = 0; month < 12; month++) {
+            if (new Date(year, month, 1).getDay() === 0) {
+              sundayCnt++;
             }
-
-            document.problem19.problem19output.value = `From 1 Jan 1901 to 31 Dec 2000 there were ${sundayCnt} sundays on the first day of the month.`;
+          }
         }
 
-        function permutation() {
-            alert('\"Schreibe eine Funktion Zahlenpermutierer() die eine vierstellige Zahle in jeweils 24 Permutationen ausgibt und diese in einer Area anzeigt. also lies eine vierstellige Zahl ein. Zerlege sie in die einzelnen Ziffern. Und überlege dann wie du sie in 24 Möglichkeiten anzeigen kannst.\"\n© Professor Kohlweg');
+        document.problem19.problem19output.value = `From 1 Jan 1901 to 31 Dec 2000 there were ${sundayCnt} sundays on the first day of the month.`;
+      }
 
-            let numberStr = document.problem49.problem49input.value;
-            let permutations = [];
+      function permutation() {
+        alert(
+          '"Schreibe eine Funktion Zahlenpermutierer() die eine vierstellige Zahle in jeweils 24 Permutationen ausgibt und diese in einer Area anzeigt. also lies eine vierstellige Zahl ein. Zerlege sie in die einzelnen Ziffern. Und überlege dann wie du sie in 24 Möglichkeiten anzeigen kannst."\n© Professor Kohlweg'
+        );
 
-            if (numberStr.length !== 4) {
-                document.problem49.problem49output.value = 'Error: Only enter integers with four digits.';
-                return;
-            }
+        let numberStr = document.problem49.problem49input.value;
+        let permutations = [];
 
-            for (let i = 1000; i < 10000; i++) {
-                let currentDigits = `${i}`;
-                let numberStrCopy = numberStr;
-
-                for (let j = 0; j < 4; j++) {
-                    if (numberStrCopy.includes(currentDigits[j])) {
-                        numberStrCopy = numberStrCopy.replace(currentDigits[j], '');
-                    }
-                    else {
-                        break;
-                    }
-                    if (j === 3) {
-                        permutations.push(i);
-                    }
-                }
-            }
-
-            document.problem49.problem49output.value = `The ${permutations.length} permutations of ${numberStr} are:\n${permutations}`;
+        if (numberStr.length !== 4) {
+          document.problem49.problem49output.value =
+            'Error: Only enter integers with four digits.';
+          return;
         }
 
-        function sumOfDivisorsSquared() {
-            alert('For a positive integer n, let σ2(n) be the sum of the squares of its divisors.\nFor example, 10 is divisible by 1, 2, 5 and 10. The sum of the squares of those numbers is:\nσ2(10) = 1 + 4 + 25 + 100 = 130');
+        for (let i = 1000; i < 10000; i++) {
+          let currentDigits = `${i}`;
+          let numberStrCopy = numberStr;
 
-            let number = parseInt(document.problem79.problem79input.value);
-            let divisors = [1];
-            let divisorsSquared = [1];
-            let sumOfDivisorsSquared = 1 + number * number;
-
-            for (let i = 2; i < number; i++) {
-                if (number % i === 0) {
-                    divisors.push(i);
-                    divisorsSquared.push(i * i);
-                    sumOfDivisorsSquared += i * i;
-                }
+          for (let j = 0; j < 4; j++) {
+            if (numberStrCopy.includes(currentDigits[j])) {
+              numberStrCopy = numberStrCopy.replace(currentDigits[j], '');
+            } else {
+              break;
             }
-            divisors.push(number);
-            divisorsSquared.push(number * number);
-
-            document.problem79.problem79output.value = `${number} is divisible by ${divisors}.\nσ2(${number}) = ${stringWithPlus(divisorsSquared)} = ${sumOfDivisorsSquared}`;
+            if (j === 3) {
+              permutations.push(i);
+            }
+          }
         }
 
-        function stringWithPlus(array) {
-            let str = '';
+        document.problem49.problem49output.value = `The ${permutations.length} permutations of ${numberStr} are:\n${permutations}`;
+      }
 
-            for (let i = 0; i < array.length - 1; i++) {
-                str += `${array[i]} + `;
-            }
-            str += `${array[array.length - 1]}`;
+      function sumOfDivisorsSquared() {
+        alert(
+          'For a positive integer n, let σ2(n) be the sum of the squares of its divisors.\nFor example, 10 is divisible by 1, 2, 5 and 10. The sum of the squares of those numbers is:\nσ2(10) = 1 + 4 + 25 + 100 = 130'
+        );
 
-            return str;
+        let number = parseInt(document.problem79.problem79input.value);
+        let divisors = [1];
+        let divisorsSquared = [1];
+        let sumOfDivisorsSquared = 1 + number * number;
+
+        for (let i = 2; i < number; i++) {
+          if (number % i === 0) {
+            divisors.push(i);
+            divisorsSquared.push(i * i);
+            sumOfDivisorsSquared += i * i;
+          }
         }
+        divisors.push(number);
+        divisorsSquared.push(number * number);
+
+        document.problem79.problem79output.value = `${number} is divisible by ${divisors}.\nσ2(${number}) = ${stringWithPlus(
+          divisorsSquared
+        )} = ${sumOfDivisorsSquared}`;
+      }
+
+      function stringWithPlus(array) {
+        let str = '';
+
+        for (let i = 0; i < array.length - 1; i++) {
+          str += `${array[i]} + `;
+        }
+        str += `${array[array.length - 1]}`;
+
+        return str;
+      }
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container my-5">
-        <h1>Three Euler Problems</h1>
+      <h1>Three Euler Problems</h1>
     </div>
 
     <div class="container my-5">
-        <div class="row">
-            <div class="col-lg-2 col-md-3 col-sm12 d-flex justify-content-center">
-                <div id="number">Number 19</div>
-            </div>
-            <div class="col-lg-10 col-md-9 col-sm-12 vcenter">
-                <p class="lead">
-                    Here are some problems from the website <a href="https://projecteuler.net/" target="_blank"
-                        rel="noopener noreferrer">projecteuler.net</a>.
-                </p>
-            </div>
+      <div class="row">
+        <div class="col-lg-2 col-md-3 col-sm12 d-flex justify-content-center">
+          <div id="number">Number 19</div>
         </div>
-    </div>
-
-    <div class="container my-5">
-        <h2>Problem 19 - Counting Sundays</h2>
-
-        <form name="problem19" action="">
-            <label for="problem19-output" class="form-label">Output</label>
-            <textarea name="problem19output" readonly class="form-control" id="problem19-output"></textarea>
-            <input type="button" value="Run" class="btn btn-outline-dark mt-2" onclick="countingSundays()">
-        </form>
-    </div>
-
-    <div class="container my-5">
-        <h2>Problem 49 - Permutations</h2>
-
-        <form name="problem49" action="">
-            <label for="problem49-input">Input</label>
-            <input type="number" name="problem49input" id="problem49-input" placeholder="Enter a number with 4 digits"
-                class="form-control">
-            <label for="problem49-output" class="form-label">Output</label>
-            <textarea name="problem49output" readonly class="form-control" id="problem49-output"></textarea>
-            <input type="button" value="Run" class="btn btn-outline-dark mt-2" onclick="permutation()">
-        </form>
-    </div>
-
-    <div class="container my-5">
-        <h2>Problem 79 - Sum Of Divisors Squared</h2>
-
-        <form name="problem79" action="">
-            <label for="problem79-input">Input</label>
-            <input type="number" name="problem79input" id="problem79-input" placeholder="Enter an integer"
-                class="form-control">
-            <label for="problem79-output" class="form-label">Output</label>
-            <textarea name="problem79output" readonly class="form-control" id="problem79-output"></textarea>
-            <input type="button" value="Run" class="btn btn-outline-dark mt-2" onclick="sumOfDivisorsSquared()">
-        </form>
-    </div>
-
-    <div class="container my-5">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title"><i class="fas fa-home"></i> Home</h4>
-                <p class="card-text">Want to return to the start page?</p>
-                <a href="http://okoled19.bplaced.net" class="btn btn-dark">Take me home!</a>
-            </div>
+        <div class="col-lg-10 col-md-9 col-sm-12 vcenter">
+          <p class="lead">
+            Here are some problems from the website
+            <a
+              href="https://projecteuler.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >projecteuler.net</a
+            >.
+          </p>
         </div>
+      </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
-</body>
+    <div class="container my-5">
+      <h2>Problem 19 - Counting Sundays</h2>
 
+      <form name="problem19" action="">
+        <label for="problem19-output" class="form-label">Output</label>
+        <textarea
+          name="problem19output"
+          readonly
+          class="form-control"
+          id="problem19-output"
+        ></textarea>
+        <input
+          type="button"
+          value="Run"
+          class="btn btn-outline-dark mt-2"
+          onclick="countingSundays()"
+        />
+      </form>
+    </div>
+
+    <div class="container my-5">
+      <h2>Problem 49 - Permutations</h2>
+
+      <form name="problem49" action="">
+        <label for="problem49-input">Input</label>
+        <input
+          type="number"
+          name="problem49input"
+          id="problem49-input"
+          placeholder="Enter a number with 4 digits"
+          class="form-control"
+        />
+        <label for="problem49-output" class="form-label">Output</label>
+        <textarea
+          name="problem49output"
+          readonly
+          class="form-control"
+          id="problem49-output"
+        ></textarea>
+        <input
+          type="button"
+          value="Run"
+          class="btn btn-outline-dark mt-2"
+          onclick="permutation()"
+        />
+      </form>
+    </div>
+
+    <div class="container my-5">
+      <h2>Problem 79 - Sum Of Divisors Squared</h2>
+
+      <form name="problem79" action="">
+        <label for="problem79-input">Input</label>
+        <input
+          type="number"
+          name="problem79input"
+          id="problem79-input"
+          placeholder="Enter an integer"
+          class="form-control"
+        />
+        <label for="problem79-output" class="form-label">Output</label>
+        <textarea
+          name="problem79output"
+          readonly
+          class="form-control"
+          id="problem79-output"
+        ></textarea>
+        <input
+          type="button"
+          value="Run"
+          class="btn btn-outline-dark mt-2"
+          onclick="sumOfDivisorsSquared()"
+        />
+      </form>
+    </div>
+
+    <div class="container my-5">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title"><i class="fas fa-home"></i> Home</h4>
+          <p class="card-text">Want to return to the start page?</p>
+          <a href="http://okoled19.bplaced.net" class="btn btn-dark"
+            >Take me home!</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

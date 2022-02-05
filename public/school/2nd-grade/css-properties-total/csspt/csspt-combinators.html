@@ -1,57 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Combinators</title>
-    <link rel="stylesheet" href="../../../../css/home-exercises/css-properties-total/css-properties-total-layout.css">
-    <style>
+    <link
+      rel="stylesheet"
+      href="../../../../css/home-exercises/css-properties-total/css-properties-total-layout.css"
+    />
+    <style></style>
+  </head>
 
-    </style>
-</head>
-
-<body>
+  <body>
     <h2>Combinators</h2>
 
     <p>
-        Ein CSS-Selector kann mehr als einen einfachen Selector beinhalten. Zwischen den simplen Selectors, kann man
-        einen Combinator einbauen. Davon gibt es vier verschiedene in CSS:
+      Ein CSS-Selector kann mehr als einen einfachen Selector beinhalten.
+      Zwischen den simplen Selectors, kann man einen Combinator einbauen. Davon
+      gibt es vier verschiedene in CSS:
     </p>
     <ul>
-        <li>Descendant Selector (Leerzeichen)</li>
-        <li>Child Selector (>)</li>
-        <li>Adjacent Sibling Selector (+)</li>
-        <li>General Sibling Selector (~)</li>
+      <li>Descendant Selector (Leerzeichen)</li>
+      <li>Child Selector (>)</li>
+      <li>Adjacent Sibling Selector (+)</li>
+      <li>General Sibling Selector (~)</li>
     </ul>
 
     <table>
-        <tr style="font-weight: bold;">
-            <td>Selector</td>
-            <td>Beispiel</td>
-            <td>Erklärung</td>
-        </tr>
-        <tr>
-            <td>element element</td>
-            <td>div p</td>
-            <td>Wählt alle p-Elemente aus, die sich in div-Element befinden.</td>
-        </tr>
-        <tr>
-            <td>element > element</td>
-            <td>div > p</td>
-            <td>Wählt alle p-Elemente aus, deren parent ein div-Element ist.</td>
-        </tr>
-        <tr>
-            <td>element + element</td>
-            <td>div + p</td>
-            <td>Wählt das erste p-Element aus, das direkt nach div-Elementen platziert ist.</td>
-        </tr>
-        <tr>
-            <td>element1 ~ element2</td>
-            <td>p ~ ul</td>
-            <td>Wählt jedes ul-Element aus, vor dem sich ein p-Element befindet.</td>
-        </tr>
+      <tr style="font-weight: bold">
+        <td>Selector</td>
+        <td>Beispiel</td>
+        <td>Erklärung</td>
+      </tr>
+      <tr>
+        <td>element element</td>
+        <td>div p</td>
+        <td>Wählt alle p-Elemente aus, die sich in div-Element befinden.</td>
+      </tr>
+      <tr>
+        <td>element > element</td>
+        <td>div > p</td>
+        <td>Wählt alle p-Elemente aus, deren parent ein div-Element ist.</td>
+      </tr>
+      <tr>
+        <td>element + element</td>
+        <td>div + p</td>
+        <td>
+          Wählt das erste p-Element aus, das direkt nach div-Elementen platziert
+          ist.
+        </td>
+      </tr>
+      <tr>
+        <td>element1 ~ element2</td>
+        <td>p ~ ul</td>
+        <td>
+          Wählt jedes ul-Element aus, vor dem sich ein p-Element befindet.
+        </td>
+      </tr>
     </table>
-</body>
-
+  </body>
 </html>

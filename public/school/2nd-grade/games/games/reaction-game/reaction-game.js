@@ -11,47 +11,47 @@ document.body.style.backgroundColor = blueString;
 
 gameElement.addEventListener('click', handlePress);
 window.addEventListener('keydown', (e) => {
-    if (e.key === ' ') {
-        handlePress();
-    }
+  if (e.key === ' ') {
+    handlePress();
+  }
 });
 
 function handlePress() {
-    switch (getComputedStyle(document.body).backgroundColor) {
-        case redString:
-            handleRed();
-            break;
-        case greenString:
-            handleGreen();
-            break;
-        case blueString:
-            handleBlue();
-            break;
-    }
+  switch (getComputedStyle(document.body).backgroundColor) {
+    case redString:
+      handleRed();
+      break;
+    case greenString:
+      handleGreen();
+      break;
+    case blueString:
+      handleBlue();
+      break;
+  }
 }
 
 function handleBlue() {
-    document.body.style.backgroundColor = redString;
-    timeElement.innerText = 'Wait for green...';
+  document.body.style.backgroundColor = redString;
+  timeElement.innerText = 'Wait for green...';
 
-    const time = Math.random() * (8000 - 2000 + 1) + 2000;
-    setTimeout(() => {
-        if (getComputedStyle(document.body).backgroundColor === redString) {
-            console.log('boo !! 👻');
-            timeElement.innerText = 'boo !! 👻';
-            document.body.style.backgroundColor = greenString;
-            startTime = new Date();
-        }
-    }, time);
+  const time = Math.random() * (8000 - 2000 + 1) + 2000;
+  setTimeout(() => {
+    if (getComputedStyle(document.body).backgroundColor === redString) {
+      console.log('boo !! 👻');
+      timeElement.innerText = 'boo !! 👻';
+      document.body.style.backgroundColor = greenString;
+      startTime = new Date();
+    }
+  }, time);
 }
 
 function handleGreen() {
-    timeElement.innerText = `${new Date() - startTime} ms`;
-    document.body.style.backgroundColor = blueString;
+  timeElement.innerText = `${new Date() - startTime} ms`;
+  document.body.style.backgroundColor = blueString;
 }
 
 function handleRed() {
-    console.log('not ok 😡');
-    timeElement.innerText = 'You have to wait for green! 😡';
-    document.body.style.backgroundColor = blueString;
+  console.log('not ok 😡');
+  timeElement.innerText = 'You have to wait for green! 😡';
+  document.body.style.backgroundColor = blueString;
 }

@@ -24,7 +24,7 @@ export default function Layout({ children }) {
         />
       </Head>
 
-      <div className="h-screen flex flex-col">
+      <div className="flex h-screen flex-col">
         <NavBar />
 
         <motion.div
@@ -53,7 +53,7 @@ export default function Layout({ children }) {
             ease: 'easeOut',
           }}
         >
-          <main className="w-full sm:w-[580px] md:w-[720px] lg:w-[980px] xl:w-[1200] pt-[5rem] mx-auto px-8 sm:px-4">
+          <main className="mx-auto w-full px-8 pt-[5rem] sm:w-[580px] sm:px-4 md:w-[720px] lg:w-[980px] xl:w-[1200]">
             {children}
           </main>
         </motion.div>

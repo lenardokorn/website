@@ -1,4 +1,6 @@
 {
+  "embeddedLanguageFormatting": "auto",
+  "endOfLine": "lf",
   "jsxSingleQuote": false,
   "semi": true,
   "singleQuote": true,

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const LogoBox = () => {
   return (
-    <span className="group font-medium text-3xl inline-flex items-center mr-7">
+    <span className="group mr-7 inline-flex items-center text-3xl font-medium">
       <svg
         className="fill-current"
         width="40"

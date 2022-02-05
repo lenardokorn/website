@@ -24,10 +24,10 @@ export default function Post({ postData }) {
         </div>
         <h1 className="mt-3 mb-1">{postData.title}</h1>
         <div className="space-x-2">
-          <span className="bg-lighter dark:bg-darker py-1 px-3 rounded-full">
+          <span className="rounded-full bg-lighter py-1 px-3 dark:bg-darker">
             <HiOutlineCalendar className="inline-block" /> {postData.date}
           </span>
-          <span className="bg-lighter dark:bg-darker py-1 px-3 rounded-full">
+          <span className="rounded-full bg-lighter py-1 px-3 dark:bg-darker">
             <HiOutlineTag className="inline-block" />{' '}
             {postData.category === undefined
               ? 'Miscellaneous'

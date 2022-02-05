@@ -1,88 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS-Eigenschaft: Boxmodell</title>
-    <link rel="stylesheet" href="../../../css/home-exercises/css-properties-style.css">
+    <link
+      rel="stylesheet"
+      href="../../../css/home-exercises/css-properties-style.css"
+    />
     <style>
-        * {
-            box-sizing: border-box;
-        }
+      * {
+        box-sizing: border-box;
+      }
 
-        p {
-            font-size: 20px;
-        }
+      p {
+        font-size: 20px;
+      }
 
-        .outline {
-            background-color: forestgreen;
-            color: white;
-            text-align: center;
-        }
+      .outline {
+        background-color: forestgreen;
+        color: white;
+        text-align: center;
+      }
 
-        .border {
-            background-color: forestgreen;
-            color: white;
-            text-align: center;
-            margin: 50px;
-            padding: 0 10px 20px 10px;
-        }
+      .border {
+        background-color: forestgreen;
+        color: white;
+        text-align: center;
+        margin: 50px;
+        padding: 0 10px 20px 10px;
+      }
 
-        .content {
-            background-color: #c7c7c7;
-            color: black;
-            text-align: center;
-            padding: 50px;
-        }
+      .content {
+        background-color: #c7c7c7;
+        color: black;
+        text-align: center;
+        padding: 50px;
+      }
 
-        #padding-margin-preview {
-            border: none;
-        }
+      #padding-margin-preview {
+        border: none;
+      }
 
-        #padding-margin-preview td {
-            border: none;
-        }
+      #padding-margin-preview td {
+        border: none;
+      }
 
-        #padding-margin-preview td div {
-            background-color: mediumaquamarine;
-        }
+      #padding-margin-preview td div {
+        background-color: mediumaquamarine;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Boxmodell</h1>
 
     <table id="padding-margin-preview">
-        <tr>
-            <td>
-                <div style="font-size: 18px; padding: 21px;">Text mit 21px Padding</div>
-            </td>
-            <td>
-                <div style="font-size: 15px;">Text ohne Padding</div>
-            </td>
-            <td>
-                <div style="font-size: 23px; margin: 21px;">Diese Box hat 21px Margin.</div>
-            </td>
-        </tr>
+      <tr>
+        <td>
+          <div style="font-size: 18px; padding: 21px">
+            Text mit 21px Padding
+          </div>
+        </td>
+        <td>
+          <div style="font-size: 15px">Text ohne Padding</div>
+        </td>
+        <td>
+          <div style="font-size: 23px; margin: 21px">
+            Diese Box hat 21px Margin.
+          </div>
+        </td>
+      </tr>
     </table>
 
     <div class="border">
-        <p>Border</p>
-        <div class="content">
-            <p>Content</p>
-        </div>
+      <p>Border</p>
+      <div class="content">
+        <p>Content</p>
+      </div>
     </div>
 
     <div class="outline">
-        <p>Outline</p>
-        <div class="border" style="color: black; background-color: #c7c7c7;">
-            <p>Border</p>
-            <div class="content" style="background-color: white;">
-                <p>Content</p>
-            </div>
+      <p>Outline</p>
+      <div class="border" style="color: black; background-color: #c7c7c7">
+        <p>Border</p>
+        <div class="content" style="background-color: white">
+          <p>Content</p>
         </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>

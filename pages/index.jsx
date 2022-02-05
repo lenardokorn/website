@@ -5,13 +5,13 @@ import Accordion from '../components/accordion';
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col-reverse md:flex-row w-full md:items-center md:justify-center">
+      <div className="flex w-full flex-col-reverse md:flex-row md:items-center md:justify-center">
         <div className="flex-grow">
           <h1 className="text-6xl">Hi, I'm Lenard!</h1>
           <p className="text-2xl font-light">I write code sometimes.</p>
         </div>
         <div className="flex-shrink-0 self-center">
-          <div className="max-w-full w-[300px] lg:w-[450px]">
+          <div className="w-[300px] max-w-full lg:w-[450px]">
             <ModelViewer modelPath="/lenny.glb" />
           </div>
         </div>

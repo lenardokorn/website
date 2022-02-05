@@ -2,31 +2,31 @@ import { HiChevronDown } from 'react-icons/hi';
 
 export default function Accordion({ entries }) {
   return (
-    <ul className="rounded-md px-0 my-2 group ring-1 ring-gray-400 dark:ring-gray-700 shadow-sm list-none select-none last:border-b-0">
+    <ul className="group my-2 select-none list-none rounded-md px-0 shadow-sm ring-1 ring-gray-400 last:border-b-0 dark:ring-gray-700">
       {entries.map(({ title, text }, index) => (
         <li
           key={index}
           className={
             (index === entries.length - 1 ? '' : 'border-b ') +
-            'border-b-gray-300 dark:border-b-gray-800 hover:bg-lighter dark:hover:bg-darker'
+            'border-b-gray-300 hover:bg-lighter dark:border-b-gray-800 dark:hover:bg-darker'
           }
         >
           <div className="px-3 pt-3">
             <label
               htmlFor={title.replace(/\s/g, '') + index}
-              className="cursor-pointer flex items-center flex-wrap"
+              className="flex cursor-pointer flex-wrap items-center"
             >
               <input
                 type="checkbox"
                 name={title.replace(/\s/g, '') + index}
                 id={title.replace(/\s/g, '') + index}
-                className="hidden peer"
+                className="peer hidden"
               />
-              <span className="font-medium text-lg mb-3 peer-checked:mb-0">
+              <span className="mb-3 text-lg font-medium peer-checked:mb-0">
                 {title}
               </span>
-              <HiChevronDown className="text-2xl ml-auto peer-checked:rotate-180 transition-transform mb-3 peer-checked:mb-0" />
-              <p className="hidden peer-checked:block w-full mb-3">{text}</p>
+              <HiChevronDown className="ml-auto mb-3 text-2xl transition-transform peer-checked:mb-0 peer-checked:rotate-180" />
+              <p className="mb-3 hidden w-full peer-checked:block">{text}</p>
             </label>
           </div>
         </li>

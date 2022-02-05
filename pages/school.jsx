@@ -26,10 +26,10 @@ export default function School() {
       </p>
 
       <div
-        className="bg-orange-300 text-red-700 px-4 py-3 shadow-md rounded-md flex my-5 flex-col sm:flex-row"
+        className="my-5 flex flex-col rounded-md bg-orange-300 px-4 py-3 text-red-700 shadow-md sm:flex-row"
         role="alert"
       >
-        <FiAlertTriangle className="py-1 w-14 h-14 mr-4 self-center" />
+        <FiAlertTriangle className="mr-4 h-14 w-14 self-center py-1" />
         <p className="m-0">
           These websites are static HTML sites which I had to port over so that
           I could display them on this site which is a Next.js site.
@@ -39,10 +39,10 @@ export default function School() {
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center my-5">
+      <div className="my-5 flex flex-wrap justify-center">
         {school2ndGrade.map(({ title, icon, description, href }) => (
           <div
-            className="rounded-md p-3 m-2 ring-1 ring-gray-400 dark:ring-gray-700 hover:bg-lighter dark:hover:bg-darker hover:shadow-md shadow-sm flex-grow-0 flex-shrink basis-48 cursor-pointer select-none flex flex-col"
+            className="m-2 flex flex-shrink flex-grow-0 basis-48 cursor-pointer select-none flex-col rounded-md p-3 shadow-sm ring-1 ring-gray-400 hover:bg-lighter hover:shadow-md dark:ring-gray-700 dark:hover:bg-darker"
             key={href}
             onClick={(e) => {
               e.preventDefault();

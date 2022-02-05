@@ -15,32 +15,32 @@ html {
 }
 
 body {
-  @apply text-darkest bg-lightest;
-  @apply dark:text-lightest dark:bg-darkest;
+  @apply bg-lightest text-darkest;
+  @apply dark:bg-darkest dark:text-lightest;
 }
 
 h1 {
-  @apply text-4xl font-medium mt-0 mb-2;
+  @apply mt-0 mb-2 text-4xl font-medium;
 }
 
 h2 {
-  @apply text-3xl font-medium mt-0 mb-2;
+  @apply mt-0 mb-2 text-3xl font-medium;
 }
 
 h3 {
-  @apply text-2xl font-medium mt-0 mb-2;
+  @apply mt-0 mb-2 text-2xl font-medium;
 }
 
 h4 {
-  @apply text-xl font-medium mt-0 mb-2;
+  @apply mt-0 mb-2 text-xl font-medium;
 }
 
 h5 {
-  @apply text-lg font-medium mt-0 mb-2;
+  @apply mt-0 mb-2 text-lg font-medium;
 }
 
 h6 {
-  @apply text-base font-medium mt-0 mb-2;
+  @apply mt-0 mb-2 text-base font-medium;
 }
 
 a {
@@ -53,17 +53,17 @@ pre {
 }
 
 code {
-  @apply rounded-md font-mono bg-lighter text-darkest px-2 py-0.5;
+  @apply rounded-md bg-lighter px-2 py-0.5 font-mono text-darkest;
   @apply dark:bg-darker dark:text-lightest;
 }
 
 pre {
-  @apply rounded-md font-mono bg-lighter text-darkest p-3 whitespace-pre-wrap;
+  @apply whitespace-pre-wrap rounded-md bg-lighter p-3 font-mono text-darkest;
   @apply dark:bg-darker dark:text-lightest;
 }
 
 pre > code {
-  @apply p-0 break-all;
+  @apply break-all p-0;
 }
 
 dl,
@@ -86,16 +86,16 @@ ul {
 }
 
 blockquote {
-  @apply text-gray-500 font-light;
+  @apply font-light text-gray-500;
   @apply dark:text-gray-400;
 }
 
 hr {
-  @apply w-1/3 my-5 mx-auto text-gray-400 dark:text-gray-700;
+  @apply my-5 mx-auto w-1/3 text-gray-400 dark:text-gray-700;
 }
 
 img {
-  @apply max-w-full h-auto;
+  @apply h-auto max-w-full;
 }
 
 .markdown img {
