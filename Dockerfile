@@ -21,6 +21,7 @@ COPY package.json package-lock.json* ./
 # Install only production deps
 RUN npm install --omit=dev
 
+ENV HOST=0.0.0.0
 ENV PORT=4321
 
 EXPOSE 4321
