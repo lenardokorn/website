@@ -1,0 +1,49 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import NavigationTerminal from '../components/NavigationTerminal.tsx';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { Image } from 'astro:assets';
+import photo from '../assets/photo.png';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="dark:bg-dark dark:text-light">
+    <header
+      class="min-h-screen flex items-center lg:items-start flex-col lg:space-y-20 justify-center lg:px-52 2xl:px-96 p-10 space-y-5"
+    >
+      <div class="w-full sm:w-fit lg:self-end">
+        <NavigationTerminal client:load />
+      </div>
+      <div class="space-y-3 w-full lg:w-fit lg:justify-self-end text-center lg:text-left">
+        <h1 class="text-7xl font-bold font-mono">Lenard Okorn</h1>
+        <p class="text-2xl font-light">Computer Science student @ Graz University of Technology</p>
+      </div>
+    </header>
+    <main>
+      <section class="py-16 px-5 sm:px-28 lg:px-54 xl:px-72">
+        <h1 class="text-5xl font-bold font-mono mb-10">About</h1>
+        <div class="flex space-x-10 items-center justify-center">
+          <Image
+            src={photo}
+            alt="Lenard Okorn"
+            class="rounded-xl h-96 w-fit hidden sm:block shadow-xl shadow-black/20"
+          />
+          <p class="text-xl">
+            Hi, I'm Lenard, welcome to my website! <br />
+            On this site, I showcase the projects that I've worked on. <br />
+            ...and <a
+              href="/misc/cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="decoration-dotted underline hover:decoration-solid">here is my CV!</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
