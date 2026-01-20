@@ -1,0 +1,16 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="dark:bg-dark dark:text-light">
+    <main class="w-screen min-h-screen flex flex-col items-center justify-center space-y-16">
+      <h1 class="text-7xl font-bold font-mono text-center">Page not found °o°</h1>
+    </main>
+  </body>
+</html>
