@@ -2,6 +2,8 @@
 import BaseHead from '../components/BaseHead.astro';
 import NavigationTerminal from '../components/NavigationTerminal.tsx';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { Image } from 'astro:assets';
+import photo from '../assets/photo.png';
 ---
 
 <!doctype html>
@@ -22,11 +24,26 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
       </div>
     </header>
     <main>
-      <h1 class="font-bold text-6xl">Hello World!</h1>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit soluta quae, ipsa temporibus
-        quisquam sint fugiat? Natus perspiciatis itaque doloribus?
-      </p>
+      <section class="py-16 px-5 sm:px-28 lg:px-54 xl:px-72">
+        <h1 class="text-5xl font-bold font-mono mb-10">About</h1>
+        <div class="flex space-x-10 items-center justify-center">
+          <Image
+            src={photo}
+            alt="Lenard Okorn"
+            class="rounded-xl h-96 w-fit hidden sm:block shadow-xl shadow-black/20"
+          />
+          <p class="text-xl">
+            Hi, I'm Lenard, welcome to my website! <br />
+            On this site, I showcase the projects that I've worked on. <br />
+            ...and <a
+              href="/misc/cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="decoration-dotted underline hover:decoration-solid">here is my CV!</a
+            >
+          </p>
+        </div>
+      </section>
     </main>
   </body>
 </html>
