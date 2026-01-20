@@ -9,15 +9,17 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="dark:bg-dark">
+  <body class="dark:bg-dark dark:text-light">
     <header
-      class="min-h-screen dark:text-light flex space-x-16 space-y-3 flex-col lg:flex-row items-center justify-center px-10 xl:px-36"
+      class="min-h-screen flex items-center lg:items-start flex-col lg:space-y-20 justify-center lg:px-52 2xl:px-96 p-10 space-y-5"
     >
-      <div class="space-y-3 min-w-max">
+      <div class="w-full sm:w-fit lg:self-end">
+        <NavigationTerminal client:load />
+      </div>
+      <div class="space-y-3 w-full lg:w-fit lg:justify-self-end text-center lg:text-left">
         <h1 class="text-7xl font-bold font-mono">Lenard Okorn</h1>
         <p class="text-2xl font-light">Computer Science student @ Graz University of Technology</p>
       </div>
-      <NavigationTerminal client:load />
     </header>
     <main>
       <h1 class="font-bold text-6xl">Hello World!</h1>
