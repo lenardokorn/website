@@ -35,7 +35,7 @@ jobs:
 
       - name: Build and push image
         run: |
-          IMAGE=ghcr.io/${{ github.repository_owner }}/astro-app:latest
+          IMAGE=ghcr.io/${{ github.repository_owner }}/website:latest
           docker build -t $IMAGE .
           docker push $IMAGE
 
@@ -47,11 +47,11 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             cd ${{ secrets.CONTAINER_PATH }}
-            docker pull ghcr.io/${{ github.repository_owner }}/astro-app:latest
-            docker stop astro || true
-            docker rm astro || true
+            docker pull ghcr.io/${{ github.repository_owner }}/website:latest
+            docker stop website || true
+            docker rm website || true
             docker run -d \
-              --name astro \
+              --name website \
               -p 4321:4321 \
               --restart unless-stopped \
-              ghcr.io/${{ github.repository_owner }}/astro-app:latest
+              ghcr.io/${{ github.repository_owner }}/website:latest
