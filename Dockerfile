@@ -21,7 +21,9 @@ COPY package.json package-lock.json* ./
 # Install only production deps
 RUN npm install --omit=dev
 
+ENV PORT=4321
+
 EXPOSE 4321
 
 # Run the SSR server directly
-CMD ["node", "dist/server/index.js"]
+CMD ["node", "dist/server/entry.mjs"]
