@@ -1,5 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
+import NavigationTerminal from '../components/NavigationTerminal.tsx';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
@@ -16,17 +17,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
         <h1 class="text-7xl font-bold font-mono">Lenard Okorn</h1>
         <p class="text-2xl font-light">Computer Science student @ Graz University of Technology</p>
       </div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus modi quibusdam, odio
-        eum dolor excepturi praesentium quaerat possimus totam dolore assumenda cumque et veritatis,
-        sit laborum earum architecto, voluptates ex. Eveniet eaque facilis quisquam nobis earum quis
-        autem assumenda, corporis, necessitatibus praesentium possimus natus, quas labore. Inventore
-        illo accusantium dolorum vel nisi fugit quaerat nobis? Voluptas in voluptate illo debitis
-        aliquam reprehenderit officia earum nobis hic, error voluptatibus voluptates. Laborum
-        dolorem vero dignissimos ex rerum, velit id consequuntur hic quae reiciendis temporibus,
-        alias dolore iusto mollitia. Ad, commodi, possimus molestias rem facere quae veniam pariatur
-        voluptatibus non placeat adipisci aspernatur.
-      </p>
+      <NavigationTerminal client:load />
     </header>
     <main>
       <h1 class="font-bold text-6xl">Hello World!</h1>
