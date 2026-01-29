@@ -16,7 +16,7 @@ const projects = (await getCollection('projects'))
     projects.map((project) => (
       <a
         href={`/projects/${project.id}/`}
-        class="w-full sm:w-80 rounded-xl outline outline-dark/10 dark:outline-light/10 transition-shadow hover:shadow-lg p-5"
+        class="w-full h-full sm:w-80 rounded-xl outline outline-dark/10 dark:outline-light/10 transition-shadow hover:shadow-lg p-5 select-none"
       >
         {project.data.heroImage && (
           <Image
