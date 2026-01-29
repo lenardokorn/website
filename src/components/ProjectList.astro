@@ -11,12 +11,12 @@ const projects = (await getCollection('projects'))
   .slice(0, Astro.props.limit);
 ---
 
-<ul class="flex sm:flex-wrap flex-col sm:flex-row justify-center space-x-5 space-y-5">
+<ul class="flex sm:flex-wrap flex-col sm:flex-row justify-center">
   {
     projects.map((project) => (
       <a
         href={`/projects/${project.id}/`}
-        class="w-full h-full sm:w-80 rounded-xl outline outline-dark/10 dark:outline-light/10 transition-shadow hover:shadow-lg p-5 select-none"
+        class="w-full h-full sm:w-80 m-2.5 rounded-xl outline outline-dark/10 dark:outline-light/10 transition-shadow hover:shadow-lg p-5 select-none"
       >
         {project.data.heroImage && (
           <Image
