@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import { SITE_TITLE } from '../consts';
+
+type Props = CollectionEntry<'projects'>['data'];
+
+const { title, description, heroImage } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={`${title} | ${SITE_TITLE}`} description={description} />
+  </head>
+
+  <body class="dark:bg-dark dark:text-light">
+    <main>
+      <article class="py-16 px-5 sm:px-28 lg:px-54 xl:px-72">
+        <header>
+          {
+            heroImage && (
+              <Image
+                src={heroImage}
+                alt={title}
+                class="rounded-xl w-full aspect-2/1 object-cover object-center"
+              />
+            )
+          }
+          <h1 class="font-mono font-bold text-6xl mt-10 text-center">{title}</h1>
+          <hr class="my-10 mx-[33%] opacity-25" />
+        </header>
+        <section
+          class="prose prose-slate dark:prose-invert max-w-none prose-headings:font-mono prose-a:decoration-dotted prose-a:underline prose-a:hover:decoration-solid"
+        >
+          <slot />
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

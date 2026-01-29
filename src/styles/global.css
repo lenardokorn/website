@@ -1,8 +1,9 @@
 @import 'tailwindcss';
+@plugin '@tailwindcss/typography';
 
 @theme {
-  --color-dark: oklch(20.8% 0.042 265.755);
-  --color-light: oklch(98.4% 0.003 247.858);
+  --color-dark: var(--color-slate-900);
+  --color-light: var(--color-slate-50);
 
   --font-mono:
     'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',

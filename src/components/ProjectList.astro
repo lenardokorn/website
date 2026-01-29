@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+
+interface Props {
+  limit?: number;
+}
+
+const projects = (await getCollection('projects'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, Astro.props.limit);
+---
+
+<ul class="flex sm:flex-wrap flex-col sm:flex-row justify-center">
+  {
+    projects.map((project) => (
+      <a
+        href={`/projects/${project.id}/`}
+        class="w-full h-auto sm:w-80 m-2.5 rounded-xl outline outline-dark/10 dark:outline-light/10 transition-shadow hover:shadow-lg p-5 select-none"
+      >
+        {project.data.heroImage && (
+          <Image
+            src={project.data.heroImage}
+            alt={project.data.title}
+            class="rounded-xl aspect-2/1 object-cover object-center mb-3"
+          />
+        )}
+        <h3 class="font-mono font-bold text-2xl">{project.data.title}</h3>
+        <p>{project.data.description}</p>
+      </a>
+    ))
+  }
+</ul>

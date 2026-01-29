@@ -1,0 +1,21 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import ProjectList from '../../components/ProjectList.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={`Projects | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+  </head>
+
+  <body class="dark:bg-dark dark:text-light">
+    <main>
+      <section class="py-16 px-5 sm:px-28 lg:px-54 xl:px-72">
+        <h1 class="font-mono font-bold text-6xl mb-10 sm:mb-20">Projects</h1>
+        <ProjectList />
+      </section>
+    </main>
+  </body>
+</html>
