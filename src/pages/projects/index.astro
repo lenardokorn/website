@@ -12,23 +12,31 @@ const projects = (await getCollection('projects')).sort(
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead title={`Projects | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
   </head>
 
   <body class="dark:bg-dark dark:text-light">
     <main>
       <section class="py-16 px-5 sm:px-28 lg:px-54 xl:px-72">
-        <ul>
+        <h1 class="font-mono font-bold text-6xl mb-10 sm:mb-20">Projects</h1>
+
+        <ul class="flex sm:flex-wrap flex-col sm:flex-row justify-center space-x-5 space-y-5">
           {
             projects.map((project) => (
-              <li>
-                <a href={`/projects/${project.id}/`}>
-                  {project.data.heroImage && (
-                    <Image width={200} src={project.data.heroImage} alt={project.data.title} />
-                  )}
-                  <h4 class="title">{project.data.title}</h4>
-                </a>
-              </li>
+              <a
+                href={`/projects/${project.id}/`}
+                class="w-full sm:w-80 rounded-xl outline outline-dark/10 dark:outline-light/10 transition-shadow hover:shadow-lg p-5"
+              >
+                {project.data.heroImage && (
+                  <Image
+                    src={project.data.heroImage}
+                    alt={project.data.title}
+                    class="rounded-xl aspect-2/1 object-cover object-center mb-3"
+                  />
+                )}
+                <h2 class="font-mono font-bold text-2xl">{project.data.title}</h2>
+                <p>{project.data.description}</p>
+              </a>
             ))
           }
         </ul>
