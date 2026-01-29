@@ -15,21 +15,16 @@ const projects = (await getCollection('projects')).sort(
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
 
-  <body>
+  <body class="dark:bg-dark dark:text-light">
     <main>
-      <section>
+      <section class="py-16 px-5 sm:px-28 lg:px-54 xl:px-72">
         <ul>
           {
             projects.map((project) => (
               <li>
                 <a href={`/projects/${project.id}/`}>
                   {project.data.heroImage && (
-                    <Image
-                      width={720}
-                      height={360}
-                      src={project.data.heroImage}
-                      alt={project.data.title}
-                    />
+                    <Image width={200} src={project.data.heroImage} alt={project.data.title} />
                   )}
                   <h4 class="title">{project.data.title}</h4>
                 </a>

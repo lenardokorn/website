@@ -14,18 +14,29 @@ const { title, description, heroImage } = Astro.props;
     <BaseHead title={`${title} | ${SITE_TITLE}`} description={description} />
   </head>
 
-  <body>
+  <body class="dark:bg-dark dark:text-light">
     <main>
-      <article>
-        <div>
-          {heroImage && <Image width={1020} height={510} src={heroImage} alt={title} />}
-        </div>
-        <div class="prose">
-          <div class="title">
-            <h1>{title}</h1>
-          </div>
+      <article class="py-16 px-5 sm:px-28 lg:px-54 xl:px-72">
+        <header>
+          {
+            heroImage && (
+              <Image
+                width={1020}
+                height={510}
+                src={heroImage}
+                alt={title}
+                class="rounded-xl w-full aspect-2/1 object-cover object-center"
+              />
+            )
+          }
+          <h1 class="font-mono font-bold text-6xl mt-10 text-center">{title}</h1>
+          <hr class="my-10" />
+        </header>
+        <section
+          class="prose prose-slate dark:prose-invert max-w-none prose-headings:font-mono prose-a:decoration-dotted prose-a:underline prose-a:hover:decoration-solid"
+        >
           <slot />
-        </div>
+        </section>
       </article>
     </main>
   </body>
