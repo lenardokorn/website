@@ -15,7 +15,7 @@ const NavigationTerminal = () => {
   const [selectedLink, setSelectedLink] = createSignal('');
 
   return (
-    <div class="crt flex min-w-full flex-col rounded-xl bg-dark/90 p-5 font-mono break-all text-light shadow-xl shadow-black/20 md:min-w-md dark:bg-black/15">
+    <div class="crt flex min-w-full flex-col rounded-xl bg-dark/90 p-5 font-mono break-all text-light shadow-xl shadow-black/20 select-none md:min-w-md dark:bg-black/15">
       <div class="w-full">
         <Shell />
         <span>ls -a</span>
