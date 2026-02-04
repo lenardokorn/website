@@ -17,6 +17,7 @@ const projects = (await getCollection('projects'))
       <a
         href={`/projects/${project.id}/`}
         class="w-full h-auto sm:w-80 m-2.5 rounded-xl outline outline-dark/10 dark:outline-light/10 transition-shadow hover:shadow-lg p-5 select-none"
+        data-astro-prefetch
       >
         {project.data.heroImage && (
           <Image
