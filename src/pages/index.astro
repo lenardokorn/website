@@ -5,6 +5,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import { Image } from 'astro:assets';
 import photo from '../assets/photo.png';
 import ProjectList from '../components/ProjectList.astro';
+import { Icon } from 'astro-icon/components';
 ---
 
 <!doctype html>
@@ -24,6 +25,9 @@ import ProjectList from '../components/ProjectList.astro';
         <p class="text-2xl font-light">Computer Science student @ Graz University of Technology</p>
       </div>
     </header>
+
+    <hr class="my-10 mx-[33%] opacity-25" />
+
     <main class="py-16 px-5 sm:px-28 lg:px-54 xl:px-72 space-y-24">
       <section id="about">
         <h2 class="text-5xl font-bold font-mono mb-10">About</h2>
@@ -56,8 +60,10 @@ import ProjectList from '../components/ProjectList.astro';
         <p class="mb-5 text-xl">
           These are the latest projects that I've worked on. <a
             href="/projects"
-            class="decoration-dotted underline hover:decoration-solid">See all</a
+            class="decoration-dotted underline hover:decoration-solid"
           >
+            See all<Icon name="lucide:chevrons-right" class="inline-block ml-1" />
+          </a>
         </p>
         <ProjectList limit={3} />
       </section>
